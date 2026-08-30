@@ -195,18 +195,160 @@ footer {
     margin-right: auto;
 }
 
+.image-portrait {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 @media (max-width: 700px) {
 
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: min(100%, 94%);
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: clamp(2rem, 9vw, 2.5rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    main {
+        padding: 30px 0;
+    }
+
+    .quick-guide {
+        padding: 20px;
+        margin-bottom: 28px;
+        border-radius: 12px;
+    }
+
+    .quick-guide h2 {
+        font-size: 1.4rem;
+    }
+
+    .steps {
+        gap: 18px;
     }
 
     .step-card {
         grid-template-columns: 1fr;
+        gap: 14px;
+
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .step-number {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .step-content h2 {
+        font-size: 1.4rem;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+
+    .step-content p {
+        font-size: 1rem;
+        line-height: 1.55;
+        margin-bottom: 14px;
+    }
+
+    .tip,
+    .success {
+        padding: 12px 14px;
+        margin: 14px 0;
+        font-size: 0.95rem;
+    }
+
+    .guide-image-wrapper {
+        margin-top: 16px;
+    }
+
+    .guide-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .image-small,
+    .image-portrait {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .image-caption {
+        font-size: 0.82rem;
+        line-height: 1.4;
+        padding: 0 4px;
+    }
+
+    .benefits {
+        margin-top: 40px;
+    }
+
+    .benefits > h2 {
+        font-size: 1.7rem;
+        margin-bottom: 18px;
     }
 
     .benefit-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .benefit-card {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    footer {
+        padding: 28px 16px;
+        font-size: 0.9rem;
     }
 }
