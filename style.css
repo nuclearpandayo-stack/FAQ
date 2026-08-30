@@ -169,6 +169,26 @@ footer {
     color: #767c89;
 }
 
+.guide-image-wrapper {
+    margin-top: 20px;
+}
+
+.guide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    border-radius: 12px;
+    border: 1px solid #303541;
+}
+
+.image-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #8f95a3;
+    text-align: center;
+}
+
 @media (max-width: 700px) {
 
     .hero h1 {
