@@ -3604,3 +3604,496 @@ footer {
     }
 
 }
+
+/* ================================================= */
+/* EVENT CATEGORIES */
+/* ================================================= */
+
+/*
+    CATEGORY COLOURS
+
+    PvM         = Red
+    Skilling    = Green
+    Citadel     = Gold
+    Social      = Purple
+    Minigame    = Cyan
+    Special     = Blue
+    General     = Neutral
+*/
+
+
+/* ================================================= */
+/* CATEGORY LABEL */
+/* ================================================= */
+
+.event-category {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 5px;
+
+    padding:
+        2px
+        7px;
+
+    border-radius: 20px;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+.event-category-icon {
+    font-size: 0.65rem;
+}
+
+
+/* ================================================= */
+/* PVM */
+/* ================================================= */
+
+.event-card.event-type-pvm {
+    border-left:
+        3px solid #d95d5d;
+}
+
+.event-card.event-type-pvm
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #3a2027,
+            #261922
+        );
+
+    border-color:
+        #6e3541;
+}
+
+.event-card.event-type-pvm
+.event-date-month {
+    color: #ff8d96;
+}
+
+.event-card.event-type-pvm
+.event-category {
+    color: #ff9da4;
+
+    background:
+        rgba(217, 93, 93, 0.10);
+
+    border:
+        1px solid #69353e;
+}
+
+.calendar-event-label.event-type-pvm {
+    color: #ffc1c5;
+
+    background:
+        rgba(217, 93, 93, 0.15);
+
+    border-left-color:
+        #df6268;
+}
+
+
+/* ================================================= */
+/* SKILLING */
+/* ================================================= */
+
+.event-card.event-type-skilling {
+    border-left:
+        3px solid #4eb982;
+}
+
+.event-card.event-type-skilling
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #17352b,
+            #14271f
+        );
+
+    border-color:
+        #286046;
+}
+
+.event-card.event-type-skilling
+.event-date-month {
+    color: #72dca4;
+}
+
+.event-card.event-type-skilling
+.event-category {
+    color: #85deb0;
+
+    background:
+        rgba(78, 185, 130, 0.10);
+
+    border:
+        1px solid #2e6449;
+}
+
+.calendar-event-label.event-type-skilling {
+    color: #a4e7c4;
+
+    background:
+        rgba(78, 185, 130, 0.14);
+
+    border-left-color:
+        #4eb982;
+}
+
+
+/* ================================================= */
+/* CITADEL */
+/* ================================================= */
+
+.event-card.event-type-citadel {
+    border-left:
+        3px solid #d0a64d;
+}
+
+.event-card.event-type-citadel
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #3a3020,
+            #282218
+        );
+
+    border-color:
+        #6c582c;
+}
+
+.event-card.event-type-citadel
+.event-date-month {
+    color: #e7c56f;
+}
+
+.event-card.event-type-citadel
+.event-category {
+    color: #e8c979;
+
+    background:
+        rgba(208, 166, 77, 0.10);
+
+    border:
+        1px solid #66542d;
+}
+
+.calendar-event-label.event-type-citadel {
+    color: #f0d58d;
+
+    background:
+        rgba(208, 166, 77, 0.14);
+
+    border-left-color:
+        #d0a64d;
+}
+
+
+/* ================================================= */
+/* SOCIAL */
+/* ================================================= */
+
+.event-card.event-type-social {
+    border-left:
+        3px solid #a26bdb;
+}
+
+.event-card.event-type-social
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #30213e,
+            #21192c
+        );
+
+    border-color:
+        #5c3a77;
+}
+
+.event-card.event-type-social
+.event-date-month {
+    color: #c795f0;
+}
+
+.event-card.event-type-social
+.event-category {
+    color: #d0a4f2;
+
+    background:
+        rgba(162, 107, 219, 0.10);
+
+    border:
+        1px solid #62427d;
+}
+
+.calendar-event-label.event-type-social {
+    color: #dfbdf8;
+
+    background:
+        rgba(162, 107, 219, 0.15);
+
+    border-left-color:
+        #a26bdb;
+}
+
+
+/* ================================================= */
+/* MINIGAME */
+/* ================================================= */
+
+.event-card.event-type-minigame {
+    border-left:
+        3px solid #4db7c5;
+}
+
+.event-card.event-type-minigame
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #18333a,
+            #14262c
+        );
+
+    border-color:
+        #28616c;
+}
+
+.event-card.event-type-minigame
+.event-date-month {
+    color: #72d5df;
+}
+
+.event-card.event-type-minigame
+.event-category {
+    color: #8adce4;
+
+    background:
+        rgba(77, 183, 197, 0.10);
+
+    border:
+        1px solid #356b73;
+}
+
+.calendar-event-label.event-type-minigame {
+    color: #a7e8ed;
+
+    background:
+        rgba(77, 183, 197, 0.14);
+
+    border-left-color:
+        #4db7c5;
+}
+
+
+/* ================================================= */
+/* SPECIAL */
+/* ================================================= */
+
+.event-card.event-type-special {
+    border-left:
+        3px solid #6373e9;
+}
+
+.event-card.event-type-special
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #19264a,
+            #17213d
+        );
+
+    border-color:
+        #30477e;
+}
+
+.event-card.event-type-special
+.event-date-month {
+    color: #8f9cff;
+}
+
+.event-card.event-type-special
+.event-category {
+    color: #aeb8ff;
+
+    background:
+        rgba(88, 101, 242, 0.10);
+
+    border:
+        1px solid #4657a5;
+}
+
+.calendar-event-label.event-type-special {
+    color: #cbd2ff;
+
+    background:
+        rgba(88, 101, 242, 0.14);
+
+    border-left-color:
+        #6373e9;
+}
+
+
+/* ================================================= */
+/* GENERAL */
+/* ================================================= */
+
+.event-card.event-type-general {
+    border-left:
+        3px solid #68758a;
+}
+
+.event-card.event-type-general
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #202936,
+            #18202b
+        );
+
+    border-color:
+        #3b4859;
+}
+
+.event-card.event-type-general
+.event-date-month {
+    color: #a4afbe;
+}
+
+.event-card.event-type-general
+.event-category {
+    color: #adb7c5;
+
+    background:
+        rgba(140, 151, 168, 0.08);
+
+    border:
+        1px solid #414c5b;
+}
+
+.calendar-event-label.event-type-general {
+    color: #c0c7d1;
+
+    background:
+        rgba(130, 142, 160, 0.10);
+
+    border-left-color:
+        #68758a;
+}
+
+
+/* ================================================= */
+/* LOAD MORE */
+/* ================================================= */
+
+.events-pagination {
+    display: flex;
+
+    justify-content: center;
+
+    padding:
+        24px
+        0
+        4px;
+}
+
+.events-load-more {
+    min-width: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1px;
+
+    padding:
+        11px
+        22px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #182238,
+            #151e31
+        );
+
+    border:
+        1px solid #3b4d78;
+
+    border-radius: 9px;
+
+    font: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+.events-load-more span {
+    font-size: 0.86rem;
+
+    font-weight: 700;
+}
+
+.events-load-more small {
+    color: #7f8ba0;
+
+    font-size: 0.68rem;
+}
+
+.events-load-more:hover {
+    transform:
+        translateY(-1px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e2a45,
+            #19243b
+        );
+
+    border-color:
+        #596fba;
+}
+
+.events-load-more:hover small {
+    color: #a2acc0;
+}
+
+
+/* ================================================= */
+/* EVENT CATEGORY - MOBILE */
+/* ================================================= */
+
+@media (max-width: 700px) {
+
+    .event-category {
+        margin-bottom: 4px;
+
+        font-size: 0.57rem;
+    }
+
+}

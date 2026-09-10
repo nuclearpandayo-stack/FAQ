@@ -1,8 +1,12 @@
 const EVENTS_URL = "./data/events.json";
 
+const EVENTS_PER_PAGE = 8;
+
 let clanEvents = [];
 
 let calendarDate = new Date();
+
+let visibleEventCount = EVENTS_PER_PAGE;
 
 
 // =========================================================
@@ -71,23 +75,31 @@ async function loadEvents() {
         );
 
         if (!response.ok) {
+
             throw new Error(
                 `HTTP ${response.status}`
             );
+
         }
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
-        clanEvents = Array.isArray(data.events)
-            ? data.events
-            : [];
 
-        // Data loaded successfully.
+        clanEvents =
+            Array.isArray(data.events)
+                ? data.events
+                : [];
+
+
+        // Successful load.
         eventsError.hidden = true;
+
 
         updateGeneratedTime(
             data.generated_at
         );
+
 
         renderUpcomingEvents();
 
@@ -102,17 +114,16 @@ async function loadEvents() {
             error
         );
 
+
         /*
-         * Only show the big error message if we genuinely
-         * have no event data.
-         *
-         * This prevents a later UI/rendering problem from
-         * claiming that the calendar couldn't be loaded.
+         * Only display the full error message if
+         * we genuinely have no event data.
          */
 
         if (clanEvents.length === 0) {
 
             upcomingView.hidden = true;
+
             calendarView.hidden = true;
 
             eventsError.hidden = false;
@@ -138,27 +149,40 @@ function isAllDay(event) {
 }
 
 
-function parseEventDate(value, allDay = false) {
+function parseEventDate(
+    value,
+    allDay = false
+) {
 
     if (!value) {
+
         return null;
+
     }
 
-    /*
-        YYYY-MM-DD is deliberately parsed manually.
 
-        new Date("2026-09-12") is interpreted as UTC
-        by browsers and can move to another day depending
-        on the visitor's timezone.
-    */
+    /*
+     * Parse all-day YYYY-MM-DD values manually.
+     *
+     * Browsers otherwise interpret these as UTC,
+     * which can shift the displayed date depending
+     * on the visitor's timezone.
+     */
 
     if (
         allDay &&
         /^\d{4}-\d{2}-\d{2}$/.test(value)
     ) {
 
-        const [year, month, day] =
-            value.split("-").map(Number);
+        const [
+            year,
+            month,
+            day
+        ] =
+            value
+                .split("-")
+                .map(Number);
+
 
         return new Date(
             year,
@@ -168,6 +192,7 @@ function parseEventDate(value, allDay = false) {
 
     }
 
+
     return new Date(value);
 
 }
@@ -175,7 +200,9 @@ function parseEventDate(value, allDay = false) {
 
 function startOfToday() {
 
-    const today = new Date();
+    const today =
+        new Date();
+
 
     today.setHours(
         0,
@@ -184,21 +211,8 @@ function startOfToday() {
         0
     );
 
+
     return today;
-
-}
-
-
-function formatDate(date) {
-
-    return new Intl.DateTimeFormat(
-        "en-GB",
-        {
-            weekday: "short",
-            day: "numeric",
-            month: "short"
-        }
-    ).format(date);
 
 }
 
@@ -247,41 +261,490 @@ function formatGameTime(date) {
 
 
 // =========================================================
-// EVENT STATE
+// EVENT FILTERING
 // =========================================================
 
 function isPastEvent(event) {
 
-    const end = parseEventDate(
-        event.end || event.start,
-        isAllDay(event)
-    );
+    const end =
+        parseEventDate(
+            event.end || event.start,
+            isAllDay(event)
+        );
+
 
     if (!end) {
+
         return false;
+
     }
+
+
+    /*
+     * For all-day events the end date is exclusive.
+     *
+     * We only want it to disappear once that date
+     * has actually been reached.
+     */
+
+    if (isAllDay(event)) {
+
+        return end <= startOfToday();
+
+    }
+
+
+    /*
+     * Timed events remain visible while they're
+     * actually happening.
+     *
+     * Example:
+     * 19:00 -> 21:00
+     *
+     * It disappears after 21:00.
+     */
 
     return end < new Date();
 
 }
 
 
+function isCancelledEvent(event) {
+
+    const title =
+        (event.title || "")
+            .trim()
+            .toLowerCase();
+
+
+    const status =
+        (event.status || "")
+            .trim()
+            .toLowerCase();
+
+
+    return (
+        status === "cancelled" ||
+
+        title.startsWith("cancelled") ||
+
+        title.startsWith("canceled")
+    );
+
+}
+
+
+// =========================================================
+// EVENT CATEGORIES
+// =========================================================
+
+function getEventType(event) {
+
+    const title =
+        (event.title || "")
+            .trim()
+            .toLowerCase();
+
+
+    /*
+     * -----------------------------------------------------
+     * CITADEL
+     * -----------------------------------------------------
+     */
+
+    if (
+        title.includes("citadel") ||
+        title.includes("capping reset") ||
+        title.includes("clan cap")
+    ) {
+
+        return "citadel";
+
+    }
+
+
+    /*
+     * -----------------------------------------------------
+     * PVM
+     * -----------------------------------------------------
+     *
+     * IMPORTANT:
+     *
+     * Elite Dungeons are PvM.
+     * Normal Dungeoneering is NOT caught here.
+     */
+
+    const pvmTerms = [
+
+        "pvm",
+
+        "elite dungeon",
+        "elite dungeons",
+
+        "ed1",
+        "ed2",
+        "ed3",
+        "ed4",
+
+        "boss",
+        "bossing",
+
+        "raid",
+        "raids",
+
+        "nex",
+        "nex aod",
+        "aod",
+
+        "zammy",
+        "zamorak",
+
+        "kerapac",
+
+        "arch-glacor",
+        "arch glacor",
+
+        "raksha",
+
+        "vorago",
+
+        "solak",
+
+        "telos",
+
+        "araxxor",
+        "araxyte",
+
+        "rasial",
+
+        "sanctum",
+
+        "zuk",
+
+        "kalphite king",
+
+        "kk mass",
+
+        "corporeal beast",
+
+        "corp beast",
+
+        "god wars",
+        "gwd",
+        "gwd2",
+        "gwd3",
+
+        "dragonkin laboratory",
+
+        "shadow reef",
+
+        "temple of aminishi"
+
+    ];
+
+
+    if (
+        pvmTerms.some(
+            term =>
+                title.includes(term)
+        )
+    ) {
+
+        return "pvm";
+
+    }
+
+
+    /*
+     * -----------------------------------------------------
+     * SKILLING
+     * -----------------------------------------------------
+     *
+     * Normal Dungeoneering belongs here.
+     */
+
+    const skillingTerms = [
+
+        "dungeoneering",
+
+        "dung ",
+        "dung-",
+        "dung -",
+
+        "skilling",
+        "skill and chill",
+
+        "woodcutting",
+        "mining",
+        "fishing",
+        "archaeology",
+        "divination",
+        "runecrafting",
+        "crafting",
+        "smithing",
+        "fletching",
+        "firemaking",
+        "cooking",
+        "herblore",
+        "agility",
+        "thieving",
+        "hunter",
+        "construction",
+
+        "croesus"
+
+    ];
+
+
+    if (
+        skillingTerms.some(
+            term =>
+                title.includes(term)
+        )
+    ) {
+
+        return "skilling";
+
+    }
+
+
+    /*
+     * -----------------------------------------------------
+     * MINIGAMES
+     * -----------------------------------------------------
+     */
+
+    const minigameTerms = [
+
+        "castle wars",
+        "castlewars",
+
+        "pest control",
+
+        "barbarian assault",
+
+        "soul wars",
+
+        "clan wars",
+
+        "stealing creation",
+
+        "cabbage facepunch",
+
+        "flash powder factory",
+
+        "great orb project",
+
+        "trouble brewing",
+
+        "heist"
+
+    ];
+
+
+    if (
+        minigameTerms.some(
+            term =>
+                title.includes(term)
+        )
+    ) {
+
+        return "minigame";
+
+    }
+
+
+    /*
+     * -----------------------------------------------------
+     * SOCIAL
+     * -----------------------------------------------------
+     */
+
+    const socialTerms = [
+
+        "movie",
+
+        "movie night",
+
+        "vc party",
+
+        "voice chat",
+
+        "social",
+
+        "hide and seek",
+        "hide & seek",
+
+        "party",
+
+        "quiz",
+
+        "trivia",
+
+        "karaoke",
+
+        "chill",
+
+        "meetup"
+
+    ];
+
+
+    if (
+        socialTerms.some(
+            term =>
+                title.includes(term)
+        )
+    ) {
+
+        return "social";
+
+    }
+
+
+    /*
+     * -----------------------------------------------------
+     * SPECIAL
+     * -----------------------------------------------------
+     */
+
+    const specialTerms = [
+
+        "league",
+        "leagues",
+
+        "competition",
+        "contest",
+
+        "giveaway",
+
+        "raffle",
+
+        "drop party",
+
+        "double xp",
+        "dxp",
+
+        "clan anniversary",
+
+        "anniversary"
+
+    ];
+
+
+    if (
+        specialTerms.some(
+            term =>
+                title.includes(term)
+        )
+    ) {
+
+        return "special";
+
+    }
+
+
+    /*
+     * Unknown clan-specific events should NOT be
+     * guessed.
+     *
+     * They'll use the neutral General styling until
+     * we deliberately add them to a category.
+     */
+
+    return "general";
+
+}
+
+
+// =========================================================
+// CATEGORY INFORMATION
+// =========================================================
+
+function getEventTypeInfo(event) {
+
+    const type =
+        getEventType(event);
+
+
+    const types = {
+
+        pvm: {
+            label: "PvM",
+            icon: "⚔"
+        },
+
+        skilling: {
+            label: "Skilling",
+            icon: "◆"
+        },
+
+        citadel: {
+            label: "Citadel",
+            icon: "♜"
+        },
+
+        social: {
+            label: "Social",
+            icon: "●"
+        },
+
+        minigame: {
+            label: "Minigame",
+            icon: "◆"
+        },
+
+        special: {
+            label: "Special",
+            icon: "★"
+        },
+
+        general: {
+            label: "Clan Event",
+            icon: "●"
+        }
+
+    };
+
+
+    return {
+        type,
+        ...types[type]
+    };
+
+}
+
+
+// =========================================================
+// UPCOMING EVENTS
+// =========================================================
+
 function getUpcomingEvents() {
 
     return clanEvents
-        .filter(event => !isPastEvent(event))
+
+        .filter(
+            event =>
+                !isPastEvent(event) &&
+                !isCancelledEvent(event)
+        )
+
         .sort(
             (a, b) => {
 
-                const aDate = parseEventDate(
-                    a.start,
-                    isAllDay(a)
-                );
+                const aDate =
+                    parseEventDate(
+                        a.start,
+                        isAllDay(a)
+                    );
 
-                const bDate = parseEventDate(
-                    b.start,
-                    isAllDay(b)
-                );
+
+                const bDate =
+                    parseEventDate(
+                        b.start,
+                        isAllDay(b)
+                    );
+
 
                 return aDate - bDate;
 
@@ -306,7 +769,10 @@ function updateGeneratedTime(value) {
 
     }
 
-    const date = new Date(value);
+
+    const date =
+        new Date(value);
+
 
     eventsUpdated.textContent =
         `Last synced ${date.toLocaleString(
@@ -326,15 +792,27 @@ function updateGeneratedTime(value) {
 // EVENT CARD
 // =========================================================
 
-function createEventCard(event, compact = false) {
+function createEventCard(
+    event,
+    compact = false
+) {
 
-    const start = parseEventDate(
-        event.start,
-        isAllDay(event)
-    );
+    const start =
+        parseEventDate(
+            event.start,
+            isAllDay(event)
+        );
+
+
+    const typeInfo =
+        getEventTypeInfo(event);
+
 
     const article =
-        document.createElement("article");
+        document.createElement(
+            "article"
+        );
+
 
     article.className =
         compact
@@ -342,20 +820,34 @@ function createEventCard(event, compact = false) {
             : "event-card";
 
 
+    article.classList.add(
+        `event-type-${typeInfo.type}`
+    );
+
+
+    // =====================================================
     // DATE BLOCK
+    // =====================================================
 
     const dateBlock =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
+
 
     dateBlock.className =
         "event-date-block";
 
 
     const month =
-        document.createElement("span");
+        document.createElement(
+            "span"
+        );
+
 
     month.className =
         "event-date-month";
+
 
     month.textContent =
         start
@@ -371,10 +863,14 @@ function createEventCard(event, compact = false) {
 
 
     const day =
-        document.createElement("strong");
+        document.createElement(
+            "strong"
+        );
+
 
     day.className =
         "event-date-day";
+
 
     day.textContent =
         start
@@ -383,10 +879,14 @@ function createEventCard(event, compact = false) {
 
 
     const weekday =
-        document.createElement("span");
+        document.createElement(
+            "span"
+        );
+
 
     weekday.className =
         "event-date-weekday";
+
 
     weekday.textContent =
         start
@@ -408,24 +908,58 @@ function createEventCard(event, compact = false) {
     );
 
 
+    // =====================================================
     // CONTENT
+    // =====================================================
 
     const content =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
+
 
     content.className =
         "event-card-content";
 
 
+    // CATEGORY
+
+    const category =
+        document.createElement(
+            "div"
+        );
+
+
+    category.className =
+        "event-category";
+
+
+    category.innerHTML = `
+        <span class="event-category-icon">
+            ${typeInfo.icon}
+        </span>
+
+        ${typeInfo.label}
+    `;
+
+
+    // META
+
     const meta =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
+
 
     meta.className =
         "event-meta";
 
 
     const time =
-        document.createElement("span");
+        document.createElement(
+            "span"
+        );
+
 
     time.className =
         "event-time";
@@ -446,48 +980,70 @@ function createEventCard(event, compact = false) {
     }
 
 
-    meta.appendChild(time);
+    meta.appendChild(
+        time
+    );
 
 
     if (event.location) {
 
         const location =
-            document.createElement("span");
+            document.createElement(
+                "span"
+            );
+
 
         location.className =
             "event-location";
 
+
         location.textContent =
             event.location;
 
-        meta.appendChild(location);
+
+        meta.appendChild(
+            location
+        );
 
     }
 
 
+    // TITLE
+
     const title =
-        document.createElement("h3");
+        document.createElement(
+            "h3"
+        );
+
 
     title.textContent =
         event.title;
 
 
     content.append(
+        category,
         meta,
         title
     );
 
 
+    // DESCRIPTION
+
     if (event.description) {
 
         const description =
-            document.createElement("p");
+            document.createElement(
+                "p"
+            );
+
 
         description.className =
             "event-description";
 
+
         description.textContent =
             event.description;
+
 
         content.appendChild(
             description
@@ -496,17 +1052,27 @@ function createEventCard(event, compact = false) {
     }
 
 
+    // =====================================================
     // STATUS
+    // =====================================================
 
     const status =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
+
 
     status.className =
         "event-status";
 
+
     status.innerHTML =
         "<span></span> Scheduled";
 
+
+    // =====================================================
+    // BUILD
+    // =====================================================
 
     article.append(
         dateBlock,
@@ -514,13 +1080,14 @@ function createEventCard(event, compact = false) {
         status
     );
 
+
     return article;
 
 }
 
 
 // =========================================================
-// UPCOMING EVENTS
+// RENDER UPCOMING EVENTS
 // =========================================================
 
 function renderUpcomingEvents() {
@@ -528,7 +1095,10 @@ function renderUpcomingEvents() {
     const upcoming =
         getUpcomingEvents();
 
-    eventsList.innerHTML = "";
+
+    eventsList.innerHTML =
+        "";
+
 
     eventsCount.textContent =
         `${upcoming.length} ${
@@ -538,25 +1108,45 @@ function renderUpcomingEvents() {
         }`;
 
 
+    // NOTHING UPCOMING
+
     if (upcoming.length === 0) {
 
         eventsList.innerHTML = `
             <div class="events-empty">
-                <div class="events-empty-icon">☾</div>
-                <h3>No upcoming events</h3>
+
+                <div class="events-empty-icon">
+                    ☾
+                </div>
+
+                <h3>
+                    No upcoming events
+                </h3>
+
                 <p>
                     Nothing is currently scheduled.
                     Check back soon.
                 </p>
+
             </div>
         `;
+
 
         return;
 
     }
 
 
-    upcoming.forEach(
+    // CURRENT PAGE / CHUNK
+
+    const visibleEvents =
+        upcoming.slice(
+            0,
+            visibleEventCount
+        );
+
+
+    visibleEvents.forEach(
         event => {
 
             eventsList.appendChild(
@@ -565,6 +1155,81 @@ function renderUpcomingEvents() {
 
         }
     );
+
+
+    // =====================================================
+    // LOAD MORE
+    // =====================================================
+
+    if (
+        visibleEventCount <
+        upcoming.length
+    ) {
+
+        const remaining =
+            upcoming.length -
+            visibleEventCount;
+
+
+        const controls =
+            document.createElement(
+                "div"
+            );
+
+
+        controls.className =
+            "events-pagination";
+
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "events-load-more";
+
+
+        button.innerHTML = `
+            <span>
+                Show more events
+            </span>
+
+            <small>
+                ${remaining} remaining
+            </small>
+        `;
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                visibleEventCount +=
+                    EVENTS_PER_PAGE;
+
+
+                renderUpcomingEvents();
+
+            }
+        );
+
+
+        controls.appendChild(
+            button
+        );
+
+
+        eventsList.appendChild(
+            controls
+        );
+
+    }
 
 }
 
@@ -575,14 +1240,19 @@ function renderUpcomingEvents() {
 
 function renderCalendar() {
 
-    calendarGrid.innerHTML = "";
+    calendarGrid.innerHTML =
+        "";
+
 
     calendarMonthTitle.textContent =
-        formatMonth(calendarDate);
+        formatMonth(
+            calendarDate
+        );
 
 
     const year =
         calendarDate.getFullYear();
+
 
     const month =
         calendarDate.getMonth();
@@ -605,19 +1275,22 @@ function renderCalendar() {
 
 
     /*
-        JS:
-        Sunday = 0
-        Monday = 1
-
-        Our calendar:
-        Monday = column 0
-    */
+     * JavaScript:
+     *
+     * Sunday = 0
+     * Monday = 1
+     *
+     * Our calendar begins Monday.
+     */
 
     let startOffset =
         firstDay.getDay() - 1;
 
+
     if (startOffset < 0) {
+
         startOffset = 6;
+
     }
 
 
@@ -629,7 +1302,15 @@ function renderCalendar() {
         ).getDate();
 
 
-    const totalCells = 42;
+    const cellsNeeded =
+        startOffset +
+        daysInMonth;
+
+
+    const totalCells =
+        cellsNeeded <= 35
+            ? 35
+            : 42;
 
 
     for (
@@ -640,14 +1321,22 @@ function renderCalendar() {
 
         let dayNumber;
 
-        let cellMonth = month;
+        let cellMonth =
+            month;
 
-        let cellYear = year;
+        let cellYear =
+            year;
 
-        let outsideMonth = false;
+        let outsideMonth =
+            false;
 
 
-        if (cellIndex < startOffset) {
+        // PREVIOUS MONTH
+
+        if (
+            cellIndex <
+            startOffset
+        ) {
 
             dayNumber =
                 previousMonthDays
@@ -655,16 +1344,23 @@ function renderCalendar() {
                 + cellIndex
                 + 1;
 
+
             cellMonth =
                 month - 1;
 
-            outsideMonth = true;
+
+            outsideMonth =
+                true;
 
         }
 
+
+        // NEXT MONTH
+
         else if (
             cellIndex >=
-            startOffset + daysInMonth
+            startOffset +
+            daysInMonth
         ) {
 
             dayNumber =
@@ -673,12 +1369,18 @@ function renderCalendar() {
                 - daysInMonth
                 + 1;
 
+
             cellMonth =
                 month + 1;
 
-            outsideMonth = true;
+
+            outsideMonth =
+                true;
 
         }
+
+
+        // CURRENT MONTH
 
         else {
 
@@ -690,11 +1392,19 @@ function renderCalendar() {
         }
 
 
+        /*
+         * Midday avoids edge cases around DST when
+         * moving between calendar dates.
+         */
+
         const cellDate =
             new Date(
                 cellYear,
                 cellMonth,
-                dayNumber
+                dayNumber,
+                12,
+                0,
+                0
             );
 
 
@@ -722,7 +1432,7 @@ function renderCalendar() {
 
 
 // =========================================================
-// EVENTS ON DATE
+// EVENTS FOR CALENDAR DATE
 // =========================================================
 
 function getEventsForDate(date) {
@@ -738,21 +1448,42 @@ function getEventsForDate(date) {
     return clanEvents.filter(
         event => {
 
+            /*
+             * Never show cancelled events anywhere,
+             * including historical calendar views.
+             */
+
+            if (
+                isCancelledEvent(event)
+            ) {
+
+                return false;
+
+            }
+
+
             const start =
                 parseEventDate(
                     event.start,
                     isAllDay(event)
                 );
 
+
             const end =
                 parseEventDate(
-                    event.end || event.start,
+                    event.end ||
+                    event.start,
                     isAllDay(event)
                 );
 
 
-            if (!start || !end) {
+            if (
+                !start ||
+                !end
+            ) {
+
                 return false;
+
             }
 
 
@@ -773,14 +1504,11 @@ function getEventsForDate(date) {
 
 
             /*
-                iCalendar all-day DTEND is exclusive.
-
-                Example:
-                start 10 Sep
-                end   11 Sep
-
-                means the event only occurs on 10 Sep.
-            */
+             * iCalendar all-day DTEND is exclusive.
+             *
+             * Start 10 Sep / End 11 Sep means
+             * the event only occupies 10 Sep.
+             */
 
             if (isAllDay(event)) {
 
@@ -813,9 +1541,14 @@ function createCalendarCell(
 ) {
 
     const cell =
-        document.createElement("button");
+        document.createElement(
+            "button"
+        );
 
-    cell.type = "button";
+
+    cell.type =
+        "button";
+
 
     cell.className =
         "calendar-day";
@@ -861,18 +1594,29 @@ function createCalendarCell(
     }
 
 
+    // DAY NUMBER
+
     const number =
-        document.createElement("span");
+        document.createElement(
+            "span"
+        );
+
 
     number.className =
         "calendar-day-number";
+
 
     number.textContent =
         date.getDate();
 
 
+    // EVENT LABELS
+
     const eventContainer =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
+
 
     eventContainer.className =
         "calendar-day-events";
@@ -883,14 +1627,30 @@ function createCalendarCell(
         .forEach(
             event => {
 
+                const typeInfo =
+                    getEventTypeInfo(
+                        event
+                    );
+
+
                 const eventLabel =
-                    document.createElement("span");
+                    document.createElement(
+                        "span"
+                    );
+
 
                 eventLabel.className =
                     "calendar-event-label";
 
+
+                eventLabel.classList.add(
+                    `event-type-${typeInfo.type}`
+                );
+
+
                 eventLabel.textContent =
                     event.title;
+
 
                 eventContainer.appendChild(
                     eventLabel
@@ -903,13 +1663,18 @@ function createCalendarCell(
     if (events.length > 3) {
 
         const more =
-            document.createElement("span");
+            document.createElement(
+                "span"
+            );
+
 
         more.className =
             "calendar-event-more";
 
+
         more.textContent =
             `+${events.length - 3} more`;
+
 
         eventContainer.appendChild(
             more
@@ -943,7 +1708,7 @@ function createCalendarCell(
 
 
 // =========================================================
-// SELECTED DATE
+// SELECTED CALENDAR DATE
 // =========================================================
 
 function showSelectedDate(
@@ -954,8 +1719,10 @@ function showSelectedDate(
     calendarSelected.hidden =
         false;
 
+
     selectedDateTitle.textContent =
         formatLongDate(date);
+
 
     selectedDateEvents.innerHTML =
         "";
@@ -965,7 +1732,11 @@ function showSelectedDate(
 
         selectedDateEvents.innerHTML = `
             <div class="events-empty events-empty-small">
-                <p>No events scheduled for this day.</p>
+
+                <p>
+                    No events scheduled for this day.
+                </p>
+
             </div>
         `;
 
@@ -1003,30 +1774,49 @@ function showSelectedDate(
 
 function showUpcomingView() {
 
-    upcomingView.hidden = false;
+    upcomingView.hidden =
+        false;
 
-    calendarView.hidden = true;
+
+    calendarView.hidden =
+        true;
+
 
     upcomingViewButton
-        .classList.add("active");
+        .classList.add(
+            "active"
+        );
+
 
     calendarViewButton
-        .classList.remove("active");
+        .classList.remove(
+            "active"
+        );
 
 }
 
 
 function showCalendarView() {
 
-    upcomingView.hidden = true;
+    upcomingView.hidden =
+        true;
 
-    calendarView.hidden = false;
+
+    calendarView.hidden =
+        false;
+
 
     calendarViewButton
-        .classList.add("active");
+        .classList.add(
+            "active"
+        );
+
 
     upcomingViewButton
-        .classList.remove("active");
+        .classList.remove(
+            "active"
+        );
+
 
     renderCalendar();
 
@@ -1046,8 +1836,10 @@ function changeMonth(amount) {
             1
         );
 
+
     calendarSelected.hidden =
         true;
+
 
     renderCalendar();
 
