@@ -18,7 +18,8 @@ CALENDAR_URL = os.environ["DARK_OMEN_CALENDAR_URL"]
 
 OUTPUT_FILE = Path("data/events.json")
 
-# How much of the calendar we publish.
+# Publish a small amount of history for the calendar
+# and the next 90 days of upcoming events.
 PAST_DAYS = 7
 FUTURE_DAYS = 90
 
@@ -60,7 +61,7 @@ def get_text(event, field):
 def convert_date(value):
     """
     Convert an iCalendar date/datetime into the format
-    used by our public events JSON.
+    used by the public events JSON.
 
     Timed events are converted to UTC.
     All-day events remain YYYY-MM-DD.
@@ -94,6 +95,10 @@ def convert_date(value):
     return value.isoformat(), True
 
 
+# =========================================================
+# CONVERT EVENT
+# =========================================================
+
 def convert_event(event):
     start, start_all_day = convert_date(
         event.get("DTSTART")
@@ -103,6 +108,7 @@ def convert_event(event):
         event.get("DTEND")
     )
 
+    # Some calendar events may not have DTEND.
     if not end:
         end = start
 
@@ -112,7 +118,10 @@ def convert_event(event):
     )
 
     title = (
-        get_text(event, "SUMMARY")
+        get_text(
+            event,
+            "SUMMARY"
+        )
         or "Untitled Event"
     )
 
@@ -124,51 +133,105 @@ def convert_event(event):
     if not status:
         status = "confirmed"
 
-    # UID alone is shared by recurring occurrences.
-    # Combining it with the occurrence start gives every
-    # event occurrence a stable unique ID.
-    event_id = f"{uid}::{start}"
+    # Recurring occurrences share the same Google UID.
+    # Combining UID + start gives each occurrence its
+    # own stable ID.
+    event_id = (
+        f"{uid}::{start}"
+    )
 
     return {
         "id": event_id,
+
         "title": title,
+
         "start": start,
+
         "end": end,
+
         "all_day": (
             start_all_day
             or end_all_day
         ),
+
         "description": get_text(
             event,
             "DESCRIPTION"
         ),
+
         "location": get_text(
             event,
             "LOCATION"
         ),
+
         "status": status
     }
 
 
-def should_include_event(event):
+# =========================================================
+# EVENT FILTERING
+# =========================================================
+
+def get_exclusion_reason(event):
     """
-    Decide whether an event should appear on the
-    Dark Omen website / public event feed.
+    Return the reason an event should be excluded.
+
+    Returns None when the event should be published.
     """
 
-    title = event["title"].lower()
+    title = (
+        event["title"]
+        .strip()
+        .lower()
+    )
 
-    # Member birthdays are stored on the clan calendar,
-    # but aren't part of the public events board.
+    status = (
+        event["status"]
+        .strip()
+        .lower()
+    )
+
+    # -----------------------------------------------------
+    # BIRTHDAYS
+    # -----------------------------------------------------
+
     if "birthday" in title:
-        return False
+        return "birthday"
 
-    # Ignore events explicitly marked as cancelled
-    # by Google Calendar.
-    if event["status"] == "cancelled":
-        return False
+    # -----------------------------------------------------
+    # GOOGLE-CANCELLED EVENTS
+    # -----------------------------------------------------
 
-    return True
+    if status == "cancelled":
+        return "cancelled"
+
+    # -----------------------------------------------------
+    # MANUALLY CANCELLED EVENTS
+    #
+    # Some events are not actually marked CANCELLED in
+    # Google Calendar. Instead the organiser has renamed
+    # them:
+    #
+    #   Canceled - Castlewars - 9PM GMT
+    #   Cancelled - PvM Event
+    #
+    # These should also disappear from the website/feed.
+    # -----------------------------------------------------
+
+    if (
+        title.startswith("cancelled")
+        or title.startswith("canceled")
+    ):
+        return "cancelled"
+
+    return None
+
+
+def should_include_event(event):
+    return (
+        get_exclusion_reason(event)
+        is None
+    )
 
 
 # =========================================================
@@ -196,8 +259,10 @@ def save_events(events):
     }
 
     # Write to a temporary file first.
-    # This prevents a failed run from corrupting
-    # the existing events.json.
+    #
+    # If something goes wrong while writing, the
+    # previously working events.json remains intact.
+
     with tempfile.NamedTemporaryFile(
         mode="w",
         encoding="utf-8",
@@ -240,12 +305,16 @@ def main():
 
     start_range = (
         now
-        - timedelta(days=PAST_DAYS)
+        - timedelta(
+            days=PAST_DAYS
+        )
     )
 
     end_range = (
         now
-        + timedelta(days=FUTURE_DAYS)
+        + timedelta(
+            days=FUTURE_DAYS
+        )
     )
 
     print(
@@ -254,8 +323,10 @@ def main():
         f"to {end_range.date()}..."
     )
 
-    # Expand recurring Google Calendar events
-    # into individual occurrences.
+    # -----------------------------------------------------
+    # EXPAND RECURRING EVENTS
+    # -----------------------------------------------------
+
     calendar_events = list(
         recurring_ical_events
         .of(calendar)
@@ -265,10 +336,15 @@ def main():
         )
     )
 
+    # -----------------------------------------------------
+    # FILTER + CONVERT
+    # -----------------------------------------------------
+
     events = []
 
     skipped_birthdays = 0
     skipped_cancelled = 0
+    skipped_invalid = 0
 
     for calendar_event in calendar_events:
 
@@ -276,31 +352,57 @@ def main():
             calendar_event
         )
 
+        # Event has no usable start date.
         if not event["start"]:
+
+            skipped_invalid += 1
+
             continue
 
-        if "birthday" in event["title"].lower():
-            skipped_birthdays += 1
-            continue
-
-        if event["status"] == "cancelled":
-            skipped_cancelled += 1
-            continue
-
-        if should_include_event(event):
-            events.append(
+        exclusion_reason = (
+            get_exclusion_reason(
                 event
             )
+        )
 
-    # Sort oldest -> newest.
+        if exclusion_reason == "birthday":
+
+            skipped_birthdays += 1
+
+            continue
+
+        if exclusion_reason == "cancelled":
+
+            skipped_cancelled += 1
+
+            continue
+
+        events.append(
+            event
+        )
+
+    # -----------------------------------------------------
+    # SORT
+    # -----------------------------------------------------
+
     events.sort(
         key=lambda event:
             event["start"]
     )
 
+    # -----------------------------------------------------
+    # SAVE
+    # -----------------------------------------------------
+
     save_events(
         events
     )
+
+    # -----------------------------------------------------
+    # LOG
+    # -----------------------------------------------------
+
+    print()
 
     print(
         f"Published {len(events)} clan events."
@@ -313,6 +415,12 @@ def main():
     print(
         f"Skipped {skipped_cancelled} cancelled events."
     )
+
+    if skipped_invalid > 0:
+
+        print(
+            f"Skipped {skipped_invalid} invalid events."
+        )
 
     print(
         f"Updated {OUTPUT_FILE} successfully."
