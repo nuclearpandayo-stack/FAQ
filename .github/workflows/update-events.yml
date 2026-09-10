@@ -7,7 +7,7 @@ on:
 
   # Automatically update every hour
   schedule:
-    - cron: "17 * * * *"
+    - cron: "35 * * * *"
 
 
 permissions:
