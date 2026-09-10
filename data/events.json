@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generated_at": "2026-09-10T20:50:14Z",
-  "event_count": 51,
+  "generated_at": "2026-09-10T21:01:32Z",
+  "event_count": 43,
   "events": [
     {
-      "id": "1g7bups3u21neo8l26sjlbe9i1@google.com",
+      "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
       "title": "RS Event - LEAGUES",
       "start": "2026-08-10",
       "end": "2026-09-22",
@@ -14,7 +14,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-09-04T19:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-09-04T19:00:00Z",
       "end": "2026-09-04T20:00:00Z",
@@ -24,7 +24,7 @@
       "status": "confirmed"
     },
     {
-      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com",
+      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-09-05T20:00:00Z",
       "title": "Dungeoneering  - 9PM GMT",
       "start": "2026-09-05T20:00:00Z",
       "end": "2026-09-05T21:00:00Z",
@@ -34,7 +34,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-07T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-09-07T21:00:00Z",
       "end": "2026-09-07T22:00:00Z",
@@ -44,7 +44,7 @@
       "status": "confirmed"
     },
     {
-      "id": "62hcjq233o6ds707p4k08us7ob@google.com",
+      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-09-12T18:00:00Z",
       "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
       "start": "2026-09-12T18:00:00Z",
       "end": "2026-09-12T20:00:00Z",
@@ -54,7 +54,7 @@
       "status": "confirmed"
     },
     {
-      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com",
+      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-09-12T20:00:00Z",
       "title": "Canceled - Castlewars - 9PM GMT",
       "start": "2026-09-12T20:00:00Z",
       "end": "2026-09-12T21:00:00Z",
@@ -64,7 +64,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-14T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-09-14T21:00:00Z",
       "end": "2026-09-14T22:00:00Z",
@@ -74,17 +74,7 @@
       "status": "confirmed"
     },
     {
-      "id": "3q58ea8tovtabbevujbi3fhd0m@google.com",
-      "title": "AvanaBlue Birthday",
-      "start": "2026-09-17",
-      "end": "2026-09-18",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-09-18T19:00:00Z",
       "title": "8PM GMT - EU PVM Events - Elite Dungeons",
       "start": "2026-09-18T19:00:00Z",
       "end": "2026-09-18T20:00:00Z",
@@ -94,17 +84,7 @@
       "status": "confirmed"
     },
     {
-      "id": "6ish6djjl625jf45dqh9q7f9vk@google.com",
-      "title": "Club Donkey Birthday",
-      "start": "2026-09-19",
-      "end": "2026-09-20",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com",
+      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-09-19T20:00:00Z",
       "title": "Dungeoneering  - 9PM GMT",
       "start": "2026-09-19T20:00:00Z",
       "end": "2026-09-19T21:00:00Z",
@@ -114,7 +94,7 @@
       "status": "confirmed"
     },
     {
-      "id": "3or5vt5267ndomdq7lmaitlecu@google.com",
+      "id": "3or5vt5267ndomdq7lmaitlecu@google.com::2026-09-20T20:00:00Z",
       "title": "9PM GMT - SUS Sundays VC Parties",
       "start": "2026-09-20T20:00:00Z",
       "end": "2026-09-20T21:00:00Z",
@@ -124,7 +104,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-21T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-09-21T21:00:00Z",
       "end": "2026-09-21T22:00:00Z",
@@ -134,7 +114,7 @@
       "status": "confirmed"
     },
     {
-      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com",
+      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-09-26T20:00:00Z",
       "title": "Castlewars - 9PM GMT",
       "start": "2026-09-26T20:00:00Z",
       "end": "2026-09-26T21:00:00Z",
@@ -144,7 +124,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-28T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-09-28T21:00:00Z",
       "end": "2026-09-28T22:00:00Z",
@@ -154,7 +134,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-02T19:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-10-02T19:00:00Z",
       "end": "2026-10-02T20:00:00Z",
@@ -164,17 +144,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1ah3lkms3u8u6timg7i02oanc4@google.com",
-      "title": "Arabstar Birthday",
-      "start": "2026-10-03",
-      "end": "2026-10-04",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com",
+      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-10-03T20:00:00Z",
       "title": "Dungeoneering  - 9PM GMT",
       "start": "2026-10-03T20:00:00Z",
       "end": "2026-10-03T21:00:00Z",
@@ -184,17 +154,7 @@
       "status": "confirmed"
     },
     {
-      "id": "0an88sgc97obder22mu8l22is7@google.com",
-      "title": "FeynixParry1 Birthday",
-      "start": "2026-10-04",
-      "end": "2026-10-05",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-05T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-10-05T21:00:00Z",
       "end": "2026-10-05T22:00:00Z",
@@ -204,7 +164,7 @@
       "status": "confirmed"
     },
     {
-      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com",
+      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com::2026-10-09T06:00:00Z",
       "title": "7PM GMT - VC Party - Movie Night",
       "start": "2026-10-09T06:00:00Z",
       "end": "2026-10-09T06:30:00Z",
@@ -214,17 +174,7 @@
       "status": "confirmed"
     },
     {
-      "id": "2g0iaqa6edng9q2m6egid1r67h@google.com",
-      "title": "Phillyboi421 Birthday",
-      "start": "2026-10-10",
-      "end": "2026-10-11",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "62hcjq233o6ds707p4k08us7ob@google.com",
+      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-10-10T18:00:00Z",
       "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
       "start": "2026-10-10T18:00:00Z",
       "end": "2026-10-10T20:00:00Z",
@@ -234,7 +184,7 @@
       "status": "confirmed"
     },
     {
-      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com",
+      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-10-10T20:00:00Z",
       "title": "Castlewars - 9PM GMT",
       "start": "2026-10-10T20:00:00Z",
       "end": "2026-10-10T21:00:00Z",
@@ -244,7 +194,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-12T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-10-12T21:00:00Z",
       "end": "2026-10-12T22:00:00Z",
@@ -254,7 +204,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-16T19:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-10-16T19:00:00Z",
       "end": "2026-10-16T20:00:00Z",
@@ -264,7 +214,7 @@
       "status": "confirmed"
     },
     {
-      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com",
+      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-10-17T20:00:00Z",
       "title": "Dungeoneering  - 9PM GMT",
       "start": "2026-10-17T20:00:00Z",
       "end": "2026-10-17T21:00:00Z",
@@ -274,7 +224,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-19T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-10-19T21:00:00Z",
       "end": "2026-10-19T22:00:00Z",
@@ -284,17 +234,7 @@
       "status": "confirmed"
     },
     {
-      "id": "5c093q7hia7r28chea2ve48n0q@google.com",
-      "title": "Metalnuss Birthday",
-      "start": "2026-10-24",
-      "end": "2026-10-25",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com",
+      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-10-24T20:00:00Z",
       "title": "Castlewars - 9PM GMT",
       "start": "2026-10-24T20:00:00Z",
       "end": "2026-10-24T21:00:00Z",
@@ -304,7 +244,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-10-26T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-10-26T21:00:00Z",
       "end": "2026-10-26T21:30:00Z",
@@ -314,17 +254,7 @@
       "status": "confirmed"
     },
     {
-      "id": "73p2vblnjbks5lnthj89ih4vbn@google.com",
-      "title": "Rarenun Birthday",
-      "start": "2026-10-29",
-      "end": "2026-10-30",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-30T20:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-10-30T20:00:00Z",
       "end": "2026-10-30T21:00:00Z",
@@ -334,7 +264,7 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-10-31T21:00:00Z",
       "title": "Dungeoneering - 9PM Gametime",
       "start": "2026-10-31T21:00:00Z",
       "end": "2026-10-31T22:00:00Z",
@@ -344,17 +274,7 @@
       "status": "confirmed"
     },
     {
-      "id": "5sk972n98l3gmumbojdaf709sm@google.com",
-      "title": "Azuzu Birthday",
-      "start": "2026-11-01",
-      "end": "2026-11-02",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-11-02T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-02T21:00:00Z",
       "end": "2026-11-02T21:30:00Z",
@@ -364,7 +284,7 @@
       "status": "confirmed"
     },
     {
-      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com",
+      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com::2026-11-06T07:00:00Z",
       "title": "7PM GMT - VC Party - Movie Night",
       "start": "2026-11-06T07:00:00Z",
       "end": "2026-11-06T07:30:00Z",
@@ -374,7 +294,7 @@
       "status": "confirmed"
     },
     {
-      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com",
+      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2026-11-07T21:00:00Z",
       "title": "Castlewars - 9PM gametime",
       "start": "2026-11-07T21:00:00Z",
       "end": "2026-11-07T21:30:00Z",
@@ -384,7 +304,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-11-09T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-09T21:00:00Z",
       "end": "2026-11-09T21:30:00Z",
@@ -394,7 +314,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-11-13T20:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-11-13T20:00:00Z",
       "end": "2026-11-13T21:00:00Z",
@@ -404,7 +324,7 @@
       "status": "confirmed"
     },
     {
-      "id": "62hcjq233o6ds707p4k08us7ob@google.com",
+      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-11-14T19:00:00Z",
       "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
       "start": "2026-11-14T19:00:00Z",
       "end": "2026-11-14T21:00:00Z",
@@ -414,7 +334,7 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-14T21:00:00Z",
       "title": "Dungeoneering - 9PM Gametime",
       "start": "2026-11-14T21:00:00Z",
       "end": "2026-11-14T22:00:00Z",
@@ -424,7 +344,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-11-16T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-16T21:00:00Z",
       "end": "2026-11-16T21:30:00Z",
@@ -434,7 +354,7 @@
       "status": "confirmed"
     },
     {
-      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com",
+      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2026-11-21T21:00:00Z",
       "title": "Castlewars - 9PM gametime",
       "start": "2026-11-21T21:00:00Z",
       "end": "2026-11-21T21:30:00Z",
@@ -444,7 +364,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-11-23T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-23T21:00:00Z",
       "end": "2026-11-23T21:30:00Z",
@@ -454,7 +374,7 @@
       "status": "confirmed"
     },
     {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com",
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-11-27T20:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-11-27T20:00:00Z",
       "end": "2026-11-27T21:00:00Z",
@@ -464,7 +384,7 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-28T21:00:00Z",
       "title": "Dungeoneering - 9PM Gametime",
       "start": "2026-11-28T21:00:00Z",
       "end": "2026-11-28T22:00:00Z",
@@ -474,7 +394,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-11-30T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-30T21:00:00Z",
       "end": "2026-11-30T21:30:00Z",
@@ -484,7 +404,7 @@
       "status": "confirmed"
     },
     {
-      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com",
+      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com::2026-12-04T07:00:00Z",
       "title": "7PM GMT - VC Party - Movie Night",
       "start": "2026-12-04T07:00:00Z",
       "end": "2026-12-04T07:30:00Z",
@@ -494,7 +414,7 @@
       "status": "confirmed"
     },
     {
-      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com",
+      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2026-12-05T21:00:00Z",
       "title": "Castlewars - 9PM gametime",
       "start": "2026-12-05T21:00:00Z",
       "end": "2026-12-05T21:30:00Z",
@@ -504,7 +424,7 @@
       "status": "confirmed"
     },
     {
-      "id": "1col6otvisg79023j3c87te494@google.com",
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-12-07T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-12-07T21:00:00Z",
       "end": "2026-12-07T21:30:00Z",
