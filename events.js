@@ -82,6 +82,9 @@ async function loadEvents() {
             ? data.events
             : [];
 
+        // Data loaded successfully.
+        eventsError.hidden = true;
+
         updateGeneratedTime(
             data.generated_at
         );
@@ -99,14 +102,25 @@ async function loadEvents() {
             error
         );
 
-        upcomingView.hidden = true;
+        /*
+         * Only show the big error message if we genuinely
+         * have no event data.
+         *
+         * This prevents a later UI/rendering problem from
+         * claiming that the calendar couldn't be loaded.
+         */
 
-        calendarView.hidden = true;
+        if (clanEvents.length === 0) {
 
-        eventsError.hidden = false;
+            upcomingView.hidden = true;
+            calendarView.hidden = true;
 
-        eventsUpdated.textContent =
-            "Calendar unavailable";
+            eventsError.hidden = false;
+
+            eventsUpdated.textContent =
+                "Calendar unavailable";
+
+        }
 
     }
 
