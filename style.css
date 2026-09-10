@@ -671,110 +671,245 @@ img {
 
 
 
-/* ================================================= */
-/* LEADERSHIP */
+
+    /* ================================================= */
+/* LEADERSHIP PAGE */
 /* ================================================= */
 
-.leadership-section {
-    margin-bottom: 50px;
+.leadership-hero {
+    padding:
+        40px
+        0
+        22px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(88, 101, 242, 0.10),
+            transparent 34%
+        );
 }
 
-.leadership-grid {
+.leadership-hero-inner {
+    max-width: 850px;
+}
+
+.leadership-hero h1 {
+    margin-bottom: 8px;
+
+    font-size:
+        clamp(
+            2.4rem,
+            5vw,
+            3.6rem
+        );
+
+    line-height: 1.1;
+}
+
+.leadership-hero-text {
+    max-width: 680px;
+
+    margin:
+        0
+        auto;
+
+    color: #aeb8ca;
+
+    font-size: 1.05rem;
+}
+
+
+
+.leadership-page-main {
+    padding:
+        0
+        0
+        70px;
+}
+
+.leadership-container {
+    max-width: 1000px;
+}
+
+
+
+/* ================================================= */
+/* GROUP */
+/* ================================================= */
+
+.leadership-group {
+    margin-bottom: 42px;
+}
+
+.leadership-group-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.leadership-label {
+    margin-bottom: 2px;
+
+    color: #7f8df0;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.leadership-group-heading h2 {
+    color: #ffffff;
+
+    font-size: 1.2rem;
+
+    line-height: 1.2;
+}
+
+
+
+/* ================================================= */
+/* GRID */
+/* ================================================= */
+
+.leadership-card-grid {
     display: grid;
 
     grid-template-columns:
         repeat(
             2,
-            1fr
+            minmax(0, 1fr)
         );
 
-    gap: 18px;
+    gap: 12px;
 }
 
-.leader-card {
+
+
+/* ================================================= */
+/* CARD */
+/* ================================================= */
+
+.leadership-card {
     position: relative;
 
     display: flex;
 
     align-items: center;
 
-    gap: 18px;
+    gap: 16px;
 
-    min-height: 145px;
+    min-height: 118px;
 
-    padding: 24px;
+    padding:
+        18px
+        20px;
 
     background:
         linear-gradient(
             135deg,
-            #182131,
-            #141b28
+            #111a29,
+            #0f1724
         );
 
     border:
-        1px solid #34425c;
+        1px solid #293953;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
     overflow: hidden;
 
     transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
 }
 
-.leader-card:hover {
+.leadership-card:hover {
     transform:
-        translateY(-2px);
+        translateY(-1px);
 
     border-color:
-        #6577ff;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.22);
-}
-
-.leader-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 130px;
-    height: 130px;
-
-    right: -50px;
-    top: -50px;
-
-    border-radius: 50%;
-
-    background:
-        #5865f2;
-
-    opacity: 0.04;
-}
-
-.leader-owner {
-    grid-column:
-        1 / -1;
-
-    min-height: 165px;
-
-    border-color:
-        #6275ff;
+        #465da0;
 
     background:
         linear-gradient(
             135deg,
-            rgba(79, 95, 232, 0.22),
-            #182131
+            #152033,
+            #111a29
         );
 }
 
-.leader-icon {
-    width: 58px;
-    height: 58px;
+
+
+/* subtle decorative glow */
+
+.leadership-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 110px;
+
+    top: -55px;
+
+    right: -45px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(88, 101, 242, 0.07);
+
+    pointer-events: none;
+}
+
+
+
+/* ================================================= */
+/* OWNER */
+/* ================================================= */
+
+.leadership-owner-card {
+    min-height: 135px;
+
+    border-color:
+        #66552d;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(119, 92, 37, 0.12),
+            #111a29
+        );
+}
+
+.leadership-owner-card:hover {
+    border-color:
+        #9c7938;
+}
+
+
+
+/* ================================================= */
+/* AVATARS */
+/* ================================================= */
+
+.leadership-avatar {
+    width: 52px;
+
+    height: 52px;
 
     flex-shrink: 0;
 
@@ -784,166 +919,254 @@ img {
 
     justify-content: center;
 
-    border-radius: 12px;
+    border-radius: 11px;
+
+    color: #dce2ff;
 
     background:
         linear-gradient(
             135deg,
-            #41558a,
-            #5368ab
+            #1d2a4f,
+            #17213d
         );
 
     border:
-        1px solid #5c73ba;
+        1px solid #30477e;
 
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
 
-.leader-info {
+.owner-avatar {
+    color: #ffe3a1;
+
+    background:
+        linear-gradient(
+            135deg,
+            #574522,
+            #75602f
+        );
+
+    border-color:
+        #a07c38;
+}
+
+.deputy-avatar {
+    color: #d5dcff;
+}
+
+.overseer-avatar {
+    color: #a8eef3;
+
+    background:
+        linear-gradient(
+            135deg,
+            #193b43,
+            #16424a
+        );
+
+    border-color:
+        #327a83;
+}
+
+.coordinator-avatar {
+    color: #e1c7ff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #39274f,
+            #51356f
+        );
+
+    border-color:
+        #73509d;
+}
+
+
+
+/* ================================================= */
+/* INFO */
+/* ================================================= */
+
+.leadership-info {
+    min-width: 0;
+
     position: relative;
 
     z-index: 2;
 }
 
-.leader-rank {
-    margin-bottom: 4px;
+.leadership-rank {
+    margin-bottom: 2px;
 
-    color: #b7c2ff;
+    color: #8e9bed;
 
-    font-size: 0.72rem;
+    font-size: 0.67rem;
 
     font-weight: 700;
 
     text-transform: uppercase;
 
-    letter-spacing: 1.4px;
+    letter-spacing: 1.5px;
 }
 
-.leader-info h2 {
-    margin-bottom: 10px;
+.leadership-owner-card .leadership-rank {
+    color: #ddb965;
+}
+
+.overseer-card .leadership-rank {
+    color: #72d5df;
+}
+
+.coordinator-card .leadership-rank {
+    color: #bd8be9;
+}
+
+.leadership-info h3 {
+    margin-bottom: 7px;
 
     color: #ffffff;
 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
     line-height: 1.2;
 }
 
-.role-tags {
+
+
+/* ================================================= */
+/* TAGS */
+/* ================================================= */
+
+.leadership-tags {
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 6px;
 }
 
-.role-tags span {
-    padding:
-        4px
-        9px;
+.leadership-tags span {
+    display: inline-block;
 
-    color: #e6e9ff;
+    padding:
+        3px
+        8px;
+
+    color: #cbd3ff;
 
     background:
-        rgba(88, 101, 242, 0.18);
+        rgba(88, 101, 242, 0.10);
 
     border:
-        1px solid #6678dd;
+        1px solid #4657a5;
 
     border-radius: 20px;
 
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+
+    line-height: 1.3;
 }
 
-.leader-owner .leader-icon {
+.leadership-owner-card .leadership-tags span {
+    color: #f2d998;
+
+    background:
+        rgba(198, 157, 77, 0.08);
+
+    border-color:
+        #725d32;
+}
+
+.overseer-card .leadership-tags span {
+    color: #a7e7ed;
+
+    background:
+        rgba(74, 168, 179, 0.07);
+
+    border-color:
+        #376c73;
+}
+
+.coordinator-card .leadership-tags span {
+    color: #ddc0fa;
+
+    background:
+        rgba(139, 100, 199, 0.07);
+
+    border-color:
+        #634884;
+}
+
+
+
+/* ================================================= */
+/* CONTACT BOX */
+/* ================================================= */
+
+.leadership-contact {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 12px;
+
+    padding:
+        20px
+        22px;
+
     background:
         linear-gradient(
             135deg,
-            #665333,
-            #8d713d
+            #111a29,
+            #0f1724
         );
 
-    border-color:
-        #c69d4d;
+    border:
+        1px solid #293953;
+
+    border-radius: 12px;
 }
 
-.leader-owner .leader-rank {
-    color: #f0ce80;
-}
+.leadership-contact-icon {
+    width: 46px;
 
-.leader-owner .role-tags span {
-    color: #ffe4a2;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
 
     background:
-        rgba(198, 157, 77, 0.12);
+        #192642;
 
-    border-color:
-        #a47f37;
+    border:
+        1px solid #30477e;
+
+    font-size: 1.15rem;
 }
 
-.rank-overseer {
-    border-color:
-        #355b61;
+.leadership-contact h2 {
+    margin-bottom: 2px;
+
+    font-size: 1rem;
 }
 
-.rank-overseer .leader-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #254f55,
-            #33727a
-        );
+.leadership-contact p {
+    max-width: 750px;
 
-    border-color:
-        #4aa8b3;
+    color: #9faaba;
+
+    font-size: 0.86rem;
 }
-
-.rank-overseer .leader-rank {
-    color: #82dbe5;
-}
-
-.rank-overseer .role-tags span {
-    color: #b8f4fa;
-
-    background:
-        rgba(74, 168, 179, 0.10);
-
-    border-color:
-        #438a93;
-}
-
-.rank-coordinator {
-    border-color:
-        #513e69;
-}
-
-.rank-coordinator .leader-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #4d3769,
-            #674891
-        );
-
-    border-color:
-        #8b64c7;
-}
-
-.rank-coordinator .leader-rank {
-    color: #c59cf8;
-}
-
-.rank-coordinator .role-tags span {
-    color: #e3c8ff;
-
-    background:
-        rgba(139, 100, 199, 0.10);
-
-    border-color:
-        #7452aa;
-}
-
-
 
 /* ================================================= */
 /* RULES PAGE */
@@ -1958,6 +2181,7 @@ footer {
 
 
 
+
 /* ================================================= */
 /* MOBILE */
 /* ================================================= */
@@ -2063,509 +2287,8 @@ footer {
     }
 
 
-    /* ================================================= */
-/* LEADERSHIP PAGE */
-/* ================================================= */
+    /* LEADERSHIP */
 
-.leadership-hero {
-    padding:
-        40px
-        0
-        22px;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(88, 101, 242, 0.10),
-            transparent 34%
-        );
-}
-
-.leadership-hero-inner {
-    max-width: 850px;
-}
-
-.leadership-hero h1 {
-    margin-bottom: 8px;
-
-    font-size:
-        clamp(
-            2.4rem,
-            5vw,
-            3.6rem
-        );
-
-    line-height: 1.1;
-}
-
-.leadership-hero-text {
-    max-width: 680px;
-
-    margin:
-        0
-        auto;
-
-    color: #aeb8ca;
-
-    font-size: 1.05rem;
-}
-
-
-
-.leadership-page-main {
-    padding:
-        0
-        0
-        70px;
-}
-
-.leadership-container {
-    max-width: 1000px;
-}
-
-
-
-/* ================================================= */
-/* GROUP */
-/* ================================================= */
-
-.leadership-group {
-    margin-bottom: 42px;
-}
-
-.leadership-group-heading {
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    margin-bottom: 14px;
-}
-
-.leadership-label {
-    margin-bottom: 2px;
-
-    color: #7f8df0;
-
-    font-size: 0.68rem;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-}
-
-.leadership-group-heading h2 {
-    color: #ffffff;
-
-    font-size: 1.2rem;
-
-    line-height: 1.2;
-}
-
-
-
-/* ================================================= */
-/* GRID */
-/* ================================================= */
-
-.leadership-card-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(0, 1fr)
-        );
-
-    gap: 12px;
-}
-
-
-
-/* ================================================= */
-/* CARD */
-/* ================================================= */
-
-.leadership-card {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 16px;
-
-    min-height: 118px;
-
-    padding:
-        18px
-        20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #111a29,
-            #0f1724
-        );
-
-    border:
-        1px solid #293953;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.18s ease,
-        border-color 0.18s ease,
-        background 0.18s ease;
-}
-
-.leadership-card:hover {
-    transform:
-        translateY(-1px);
-
-    border-color:
-        #465da0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #152033,
-            #111a29
-        );
-}
-
-
-
-/* subtle decorative glow */
-
-.leadership-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 110px;
-
-    height: 110px;
-
-    top: -55px;
-
-    right: -45px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(88, 101, 242, 0.07);
-
-    pointer-events: none;
-}
-
-
-
-/* ================================================= */
-/* OWNER */
-/* ================================================= */
-
-.leadership-owner-card {
-    min-height: 135px;
-
-    border-color:
-        #66552d;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(119, 92, 37, 0.12),
-            #111a29
-        );
-}
-
-.leadership-owner-card:hover {
-    border-color:
-        #9c7938;
-}
-
-
-
-/* ================================================= */
-/* AVATARS */
-/* ================================================= */
-
-.leadership-avatar {
-    width: 52px;
-
-    height: 52px;
-
-    flex-shrink: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 11px;
-
-    color: #dce2ff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #1d2a4f,
-            #17213d
-        );
-
-    border:
-        1px solid #30477e;
-
-    font-size: 1.25rem;
-}
-
-.owner-avatar {
-    color: #ffe3a1;
-
-    background:
-        linear-gradient(
-            135deg,
-            #574522,
-            #75602f
-        );
-
-    border-color:
-        #a07c38;
-}
-
-.deputy-avatar {
-    color: #d5dcff;
-}
-
-.overseer-avatar {
-    color: #a8eef3;
-
-    background:
-        linear-gradient(
-            135deg,
-            #193b43,
-            #16424a
-        );
-
-    border-color:
-        #327a83;
-}
-
-.coordinator-avatar {
-    color: #e1c7ff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #39274f,
-            #51356f
-        );
-
-    border-color:
-        #73509d;
-}
-
-
-
-/* ================================================= */
-/* INFO */
-/* ================================================= */
-
-.leadership-info {
-    min-width: 0;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-.leadership-rank {
-    margin-bottom: 2px;
-
-    color: #8e9bed;
-
-    font-size: 0.67rem;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1.5px;
-}
-
-.leadership-owner-card .leadership-rank {
-    color: #ddb965;
-}
-
-.overseer-card .leadership-rank {
-    color: #72d5df;
-}
-
-.coordinator-card .leadership-rank {
-    color: #bd8be9;
-}
-
-.leadership-info h3 {
-    margin-bottom: 7px;
-
-    color: #ffffff;
-
-    font-size: 1.2rem;
-
-    line-height: 1.2;
-}
-
-
-
-/* ================================================= */
-/* TAGS */
-/* ================================================= */
-
-.leadership-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 6px;
-}
-
-.leadership-tags span {
-    display: inline-block;
-
-    padding:
-        3px
-        8px;
-
-    color: #cbd3ff;
-
-    background:
-        rgba(88, 101, 242, 0.10);
-
-    border:
-        1px solid #4657a5;
-
-    border-radius: 20px;
-
-    font-size: 0.7rem;
-
-    line-height: 1.3;
-}
-
-.leadership-owner-card .leadership-tags span {
-    color: #f2d998;
-
-    background:
-        rgba(198, 157, 77, 0.08);
-
-    border-color:
-        #725d32;
-}
-
-.overseer-card .leadership-tags span {
-    color: #a7e7ed;
-
-    background:
-        rgba(74, 168, 179, 0.07);
-
-    border-color:
-        #376c73;
-}
-
-.coordinator-card .leadership-tags span {
-    color: #ddc0fa;
-
-    background:
-        rgba(139, 100, 199, 0.07);
-
-    border-color:
-        #634884;
-}
-
-
-
-/* ================================================= */
-/* CONTACT BOX */
-/* ================================================= */
-
-.leadership-contact {
-    display: flex;
-
-    align-items: center;
-
-    gap: 16px;
-
-    margin-top: 12px;
-
-    padding:
-        20px
-        22px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #111a29,
-            #0f1724
-        );
-
-    border:
-        1px solid #293953;
-
-    border-radius: 12px;
-}
-
-.leadership-contact-icon {
-    width: 46px;
-
-    height: 46px;
-
-    flex-shrink: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 10px;
-
-    background:
-        #192642;
-
-    border:
-        1px solid #30477e;
-
-    font-size: 1.15rem;
-}
-
-.leadership-contact h2 {
-    margin-bottom: 2px;
-
-    font-size: 1rem;
-}
-
-.leadership-contact p {
-    max-width: 750px;
-
-    color: #9faaba;
-
-    font-size: 0.86rem;
-}
-
-
-
-/* ================================================= */
-/* LEADERSHIP MOBILE */
-/* ================================================= */
-
-@media (max-width: 700px) {
 
     .leadership-hero {
         padding:
@@ -2621,8 +2344,6 @@ footer {
 
         padding: 17px;
     }
-
-}
 
 
     /* RULES */
@@ -2818,9 +2539,8 @@ footer {
         border-bottom: none;
     }
 
+
 }
-
-
 
 /* ================================================= */
 /* VERY SMALL PHONES */
