@@ -1027,3 +1027,553 @@ footer {
         align-items: flex-start;
     }
 }
+
+/* ========================= */
+/* HOME PAGE */
+/* ========================= */
+
+.home-hero {
+    position: relative;
+
+    min-height: 580px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(88, 101, 242, 0.22),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #0b1019,
+            #111a2b
+        );
+
+    border-bottom: 1px solid #273044;
+}
+
+.home-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -150px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(88, 101, 242, 0.08);
+
+    filter: blur(20px);
+}
+
+.home-hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.home-hero-content {
+    max-width: 760px;
+}
+
+.logo-placeholder {
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    padding: 10px 16px;
+
+    color: #aeb8ff;
+
+    border: 1px solid #46548d;
+    border-radius: 8px;
+
+    background: rgba(88, 101, 242, 0.08);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.home-hero h1 {
+    max-width: 800px;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(3rem, 7vw, 5.2rem);
+
+    line-height: 0.98;
+}
+
+.home-hero-text {
+    max-width: 680px;
+
+    color: #bac2d0;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.primary-button {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4e5ee8,
+            #6876ff
+        );
+
+    border: 1px solid #7180ff;
+
+    box-shadow:
+        0 0 25px rgba(88, 101, 242, 0.20);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    color: #d9deea;
+
+    background: #161e2c;
+
+    border: 1px solid #354158;
+}
+
+.secondary-button:hover {
+    border-color: #53627e;
+}
+
+
+/* Sections */
+
+.home-section {
+    margin-bottom: 75px;
+}
+
+.home-section-heading {
+    margin-bottom: 25px;
+}
+
+.home-section-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.section-description {
+    max-width: 650px;
+
+    margin-top: 8px;
+
+    color: #919bab;
+}
+
+
+/* About */
+
+.about-card {
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.8fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+    padding: 35px;
+}
+
+.about-content h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.5rem;
+}
+
+.about-content p {
+    margin-bottom: 14px;
+
+    color: #b8c0cd;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-image-placeholder {
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 1px dashed #4c5870;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #182131,
+            #121925
+        );
+
+    color: #9ba6ba;
+
+    text-align: center;
+}
+
+.about-image-placeholder span {
+    color: #d4d9e3;
+
+    font-weight: 700;
+}
+
+.about-image-placeholder small {
+    color: #707b8e;
+}
+
+
+/* Home navigation cards */
+
+.home-card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.home-link-card {
+    display: block;
+
+    min-height: 245px;
+
+    padding: 26px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151d2b,
+            #111722
+        );
+
+    border: 1px solid #2f3a50;
+    border-radius: 14px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-link-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #6172e7;
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.22);
+}
+
+.home-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #5265b6;
+    border-radius: 12px;
+
+    background: #1f2b49;
+
+    font-size: 1.35rem;
+}
+
+.home-link-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.3rem;
+}
+
+.home-link-card p {
+    margin-bottom: 18px;
+
+    color: #aeb7c6;
+}
+
+.card-link {
+    color: #8e9cff;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* Community */
+
+.community-feature {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151d2b,
+            #111722
+        );
+
+    border: 1px solid #2f3a50;
+    border-radius: 14px;
+}
+
+.community-feature h2 {
+    margin-bottom: 12px;
+
+    font-size: 2rem;
+}
+
+.community-feature > div > p:not(.eyebrow) {
+    color: #aeb7c6;
+}
+
+.community-features {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.mini-feature {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: #182131;
+
+    border: 1px solid #303c53;
+    border-radius: 10px;
+}
+
+.mini-feature > span {
+    font-size: 1.35rem;
+}
+
+.mini-feature strong {
+    display: block;
+
+    margin-bottom: 2px;
+}
+
+.mini-feature p {
+    color: #8f99aa;
+
+    font-size: 0.82rem;
+}
+
+
+/* Discord */
+
+.discord-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 20px;
+
+    padding: 35px;
+
+    background:
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(88, 101, 242, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #171f31,
+            #121824
+        );
+
+    border: 1px solid #4d5eb0;
+    border-radius: 16px;
+}
+
+.discord-content {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.discord-icon {
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #5865f2;
+
+    font-size: 1.7rem;
+
+    box-shadow:
+        0 0 25px rgba(88, 101, 242, 0.22);
+}
+
+.discord-content h2 {
+    margin-bottom: 5px;
+}
+
+.discord-content p:not(.eyebrow) {
+    max-width: 600px;
+
+    color: #aeb7c6;
+}
+
+.discord-button {
+    flex-shrink: 0;
+}
+
+
+/* ========================= */
+/* HOME MOBILE */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .home-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-link-card {
+        min-height: auto;
+    }
+
+    .about-card,
+    .community-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .discord-section {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .home-hero {
+        min-height: auto;
+
+        padding: 70px 0;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(2.7rem, 13vw, 4rem);
+    }
+
+    .home-hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+    .home-section {
+        margin-bottom: 50px;
+    }
+
+    .about-card,
+    .community-feature,
+    .discord-section {
+        padding: 22px;
+    }
+
+    .community-features {
+        grid-template-columns: 1fr;
+    }
+
+    .discord-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .discord-button {
+        width: 100%;
+    }
+
+}
