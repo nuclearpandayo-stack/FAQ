@@ -3544,24 +3544,245 @@ footer {
     }
 
 
-    /* Mobile calendar becomes compact */
+    /* ================================================= */
+/* MOBILE CALENDAR */
+/* ================================================= */
 
-    .calendar-panel {
-        overflow-x: auto;
-    }
+.calendar-panel {
+    width: 100%;
 
-    .calendar-header {
-        min-width: 650px;
-    }
+    overflow: hidden;
 
-    .calendar-weekdays,
-    .calendar-grid {
-        min-width: 650px;
-    }
+    border-radius: 12px;
+}
 
-    .calendar-day {
-        min-height: 90px;
-    }
+
+/* MONTH HEADER */
+
+.calendar-header {
+    width: 100%;
+
+    min-width: 0;
+
+    grid-template-columns:
+        38px
+        minmax(0, 1fr)
+        38px;
+
+    gap: 8px;
+
+    padding:
+        14px
+        12px;
+}
+
+.calendar-title h2 {
+    font-size: 1.1rem;
+}
+
+.calendar-title .eyebrow {
+    font-size: 0.58rem;
+
+    letter-spacing: 1.5px;
+}
+
+.calendar-nav-button {
+    width: 36px;
+    height: 36px;
+
+    font-size: 1.4rem;
+}
+
+
+/* WEEKDAY HEADINGS */
+
+.calendar-weekdays {
+    width: 100%;
+
+    min-width: 0;
+
+    grid-template-columns:
+        repeat(
+            7,
+            minmax(0, 1fr)
+        );
+}
+
+.calendar-weekdays span {
+    padding:
+        7px
+        1px;
+
+    font-size: 0.56rem;
+
+    letter-spacing: 0;
+}
+
+
+/* CALENDAR GRID */
+
+.calendar-grid {
+    width: 100%;
+
+    min-width: 0;
+
+    grid-template-columns:
+        repeat(
+            7,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* DAYS */
+
+.calendar-day {
+    min-width: 0;
+
+    min-height: 66px;
+
+    padding:
+        5px
+        3px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.calendar-day-number {
+    width: 24px;
+    height: 24px;
+
+    margin:
+        0
+        auto
+        5px;
+
+    font-size: 0.68rem;
+}
+
+
+/* ================================================= */
+/* MOBILE EVENT INDICATORS */
+/* ================================================= */
+
+/*
+    Don't try to squeeze event titles into a
+    45px-wide calendar cell.
+
+    Instead each event becomes a coloured dot.
+    Clicking the day shows the full details below.
+*/
+
+.calendar-day-events {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+}
+
+
+/* Turn event pills into dots */
+
+.calendar-event-label {
+    width: 7px;
+    height: 7px;
+
+    flex: 0 0 7px;
+
+    display: block;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 50%;
+
+    font-size: 0;
+
+    line-height: 0;
+
+    white-space: normal;
+}
+
+
+/* Category colours on mobile */
+
+.calendar-event-label.event-type-pvm {
+    background: #d95d5d;
+}
+
+.calendar-event-label.event-type-skilling {
+    background: #4eb982;
+}
+
+.calendar-event-label.event-type-citadel {
+    background: #d0a64d;
+}
+
+.calendar-event-label.event-type-social {
+    background: #a26bdb;
+}
+
+.calendar-event-label.event-type-minigame {
+    background: #4db7c5;
+}
+
+.calendar-event-label.event-type-special {
+    background: #6373e9;
+}
+
+.calendar-event-label.event-type-general {
+    background: #68758a;
+}
+
+
+/* +X MORE */
+
+.calendar-event-more {
+    width: 100%;
+
+    padding: 0;
+
+    color: #7c8799;
+
+    font-size: 0.5rem;
+
+    line-height: 1.1;
+
+    text-align: center;
+}
+
+
+/* SELECTED DATE */
+
+.calendar-selected {
+    margin-top: 22px;
+}
+
+.calendar-selected-heading {
+    margin-bottom: 12px;
+}
+
+.calendar-selected-heading h2 {
+    font-size: 1.2rem;
+}
 
 }
 
