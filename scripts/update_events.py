@@ -18,20 +18,17 @@ CALENDAR_URL = os.environ["DARK_OMEN_CALENDAR_URL"]
 
 OUTPUT_FILE = Path("data/events.json")
 
-# Include a small amount of history and the next 90 days.
+# How much of the calendar we publish.
 PAST_DAYS = 7
 FUTURE_DAYS = 90
 
 
 # =========================================================
-# DOWNLOAD GOOGLE CALENDAR
+# DOWNLOAD CALENDAR
 # =========================================================
 
 def download_calendar():
-
-    print("========================================")
-    print("DOWNLOADING DARK OMEN CALENDAR")
-    print("========================================")
+    print("Downloading Dark Omen calendar...")
 
     request = urllib.request.Request(
         CALENDAR_URL,
@@ -44,38 +41,40 @@ def download_calendar():
         request,
         timeout=30
     ) as response:
-
-        print(
-            f"HTTP status: {response.status}"
-        )
-
-        raw_data = response.read()
-
-    print(
-        f"Downloaded {len(raw_data)} bytes"
-    )
-
-    return raw_data
+        return response.read()
 
 
 # =========================================================
-# DATE CONVERSION
+# HELPERS
 # =========================================================
+
+def get_text(event, field):
+    value = event.get(field)
+
+    if value is None:
+        return ""
+
+    return str(value).strip()
+
 
 def convert_date(value):
+    """
+    Convert an iCalendar date/datetime into the format
+    used by our public events JSON.
+
+    Timed events are converted to UTC.
+    All-day events remain YYYY-MM-DD.
+    """
 
     if value is None:
         return "", False
 
     value = value.dt
 
-    # Normal timed event
+    # Timed event
     if isinstance(value, datetime):
 
-        # Google should normally provide timezone information.
-        # If it doesn't, fall back to UTC.
         if value.tzinfo is None:
-
             value = value.replace(
                 tzinfo=timezone.utc
             )
@@ -91,29 +90,11 @@ def convert_date(value):
             False
         )
 
-    # Date-only / all-day event
-    return (
-        value.isoformat(),
-        True
-    )
-
-
-# =========================================================
-# ICALENDAR HELPERS
-# =========================================================
-
-def get_text(event, field):
-
-    value = event.get(field)
-
-    if value is None:
-        return ""
-
-    return str(value).strip()
+    # All-day event
+    return value.isoformat(), True
 
 
 def convert_event(event):
-
     start, start_all_day = convert_date(
         event.get("DTSTART")
     )
@@ -122,13 +103,17 @@ def convert_event(event):
         event.get("DTEND")
     )
 
-    # Some calendar events may not contain DTEND.
     if not end:
         end = start
 
     uid = get_text(
         event,
         "UID"
+    )
+
+    title = (
+        get_text(event, "SUMMARY")
+        or "Untitled Event"
     )
 
     status = get_text(
@@ -139,39 +124,51 @@ def convert_event(event):
     if not status:
         status = "confirmed"
 
+    # UID alone is shared by recurring occurrences.
+    # Combining it with the occurrence start gives every
+    # event occurrence a stable unique ID.
+    event_id = f"{uid}::{start}"
+
     return {
-
-        "id": uid,
-
-        "title": (
-            get_text(
-                event,
-                "SUMMARY"
-            )
-            or "Untitled Event"
-        ),
-
+        "id": event_id,
+        "title": title,
         "start": start,
-
         "end": end,
-
         "all_day": (
             start_all_day
             or end_all_day
         ),
-
         "description": get_text(
             event,
             "DESCRIPTION"
         ),
-
         "location": get_text(
             event,
             "LOCATION"
         ),
-
         "status": status
     }
+
+
+def should_include_event(event):
+    """
+    Decide whether an event should appear on the
+    Dark Omen website / public event feed.
+    """
+
+    title = event["title"].lower()
+
+    # Member birthdays are stored on the clan calendar,
+    # but aren't part of the public events board.
+    if "birthday" in title:
+        return False
+
+    # Ignore events explicitly marked as cancelled
+    # by Google Calendar.
+    if event["status"] == "cancelled":
+        return False
+
+    return True
 
 
 # =========================================================
@@ -179,51 +176,28 @@ def convert_event(event):
 # =========================================================
 
 def save_events(events):
-
-    print()
-    print("========================================")
-    print("WRITING JSON")
-    print("========================================")
-
     OUTPUT_FILE.parent.mkdir(
         parents=True,
         exist_ok=True
     )
 
-    generated_at = (
-        datetime.now(timezone.utc)
-        .isoformat(timespec="seconds")
-        .replace("+00:00", "Z")
-    )
-
     output = {
-
         "version": 1,
 
-        "generated_at": generated_at,
+        "generated_at": (
+            datetime.now(timezone.utc)
+            .isoformat(timespec="seconds")
+            .replace("+00:00", "Z")
+        ),
 
         "event_count": len(events),
 
         "events": events
     }
 
-    print(
-        f"Output file: {OUTPUT_FILE}"
-    )
-
-    print(
-        f"Generated at: {generated_at}"
-    )
-
-    print(
-        f"Events being written: {len(events)}"
-    )
-
-    # Write to temporary file first.
-    #
-    # This prevents us destroying the existing
-    # good events.json if something fails halfway.
-
+    # Write to a temporary file first.
+    # This prevents a failed run from corrupting
+    # the existing events.json.
     with tempfile.NamedTemporaryFile(
         mode="w",
         encoding="utf-8",
@@ -248,108 +222,17 @@ def save_events(events):
         OUTPUT_FILE
     )
 
-    print(
-        "events.json successfully written."
-    )
-
 
 # =========================================================
 # MAIN
 # =========================================================
 
 def main():
-
-    print()
-    print("========================================")
-    print("DARK OMEN EVENT IMPORTER")
-    print("========================================")
-    print()
-
-    # -----------------------------------------------------
-    # Download
-    # -----------------------------------------------------
-
     raw_calendar = download_calendar()
-
-    print()
-
-    # -----------------------------------------------------
-    # Parse ICS
-    # -----------------------------------------------------
-
-    print("========================================")
-    print("PARSING CALENDAR")
-    print("========================================")
 
     calendar = Calendar.from_ical(
         raw_calendar
     )
-
-    print(
-        "Calendar parsed successfully."
-    )
-
-    # -----------------------------------------------------
-    # Count RAW events
-    # -----------------------------------------------------
-
-    raw_events = list(
-        calendar.walk("VEVENT")
-    )
-
-    print(
-        f"Raw VEVENT count: {len(raw_events)}"
-    )
-
-    print()
-
-    # -----------------------------------------------------
-    # Show events Google actually returned
-    # -----------------------------------------------------
-
-    print("========================================")
-    print("RAW EVENTS FROM GOOGLE")
-    print("========================================")
-
-    if not raw_events:
-
-        print(
-            "WARNING: Google returned ZERO VEVENT entries."
-        )
-
-    else:
-
-        # Print first 20 so logs don't become ridiculous.
-        for index, event in enumerate(
-            raw_events[:20],
-            start=1
-        ):
-
-            print(
-                f"{index}. "
-                f"{get_text(event, 'SUMMARY')}"
-            )
-
-            print(
-                f"   DTSTART: "
-                f"{event.get('DTSTART')}"
-            )
-
-            print(
-                f"   DTEND: "
-                f"{event.get('DTEND')}"
-            )
-
-            print(
-                f"   STATUS: "
-                f"{event.get('STATUS')}"
-            )
-
-            print()
-
-    # -----------------------------------------------------
-    # Determine our requested window
-    # -----------------------------------------------------
 
     now = datetime.now(
         timezone.utc
@@ -357,44 +240,22 @@ def main():
 
     start_range = (
         now
-        - timedelta(
-            days=PAST_DAYS
-        )
+        - timedelta(days=PAST_DAYS)
     )
 
     end_range = (
         now
-        + timedelta(
-            days=FUTURE_DAYS
-        )
-    )
-
-    print("========================================")
-    print("EVENT WINDOW")
-    print("========================================")
-
-    print(
-        f"Current UTC time: {now}"
+        + timedelta(days=FUTURE_DAYS)
     )
 
     print(
-        f"Looking from: {start_range}"
+        f"Reading events from "
+        f"{start_range.date()} "
+        f"to {end_range.date()}..."
     )
 
-    print(
-        f"Looking until: {end_range}"
-    )
-
-    print()
-
-    # -----------------------------------------------------
-    # Expand recurring events
-    # -----------------------------------------------------
-
-    print("========================================")
-    print("EXPANDING EVENTS")
-    print("========================================")
-
+    # Expand recurring Google Calendar events
+    # into individual occurrences.
     calendar_events = list(
         recurring_ical_events
         .of(calendar)
@@ -404,18 +265,10 @@ def main():
         )
     )
 
-    print(
-        f"Events inside requested window: "
-        f"{len(calendar_events)}"
-    )
-
-    print()
-
-    # -----------------------------------------------------
-    # Convert to our public format
-    # -----------------------------------------------------
-
     events = []
+
+    skipped_birthdays = 0
+    skipped_cancelled = 0
 
     for calendar_event in calendar_events:
 
@@ -424,97 +277,47 @@ def main():
         )
 
         if not event["start"]:
-
-            print(
-                "Skipping event with no start date:"
-            )
-
-            print(
-                event["title"]
-            )
-
             continue
 
-        events.append(
-            event
-        )
+        if "birthday" in event["title"].lower():
+            skipped_birthdays += 1
+            continue
 
-    # -----------------------------------------------------
-    # Sort chronologically
-    # -----------------------------------------------------
+        if event["status"] == "cancelled":
+            skipped_cancelled += 1
+            continue
 
+        if should_include_event(event):
+            events.append(
+                event
+            )
+
+    # Sort oldest -> newest.
     events.sort(
         key=lambda event:
             event["start"]
     )
 
-    # -----------------------------------------------------
-    # Show EXACTLY what we're about to publish
-    # -----------------------------------------------------
-
-    print("========================================")
-    print("FINAL EVENTS")
-    print("========================================")
-
-    if not events:
-
-        print(
-            "WARNING: No events will be written."
-        )
-
-    else:
-
-        for index, event in enumerate(
-            events,
-            start=1
-        ):
-
-            print(
-                f"{index}. {event['title']}"
-            )
-
-            print(
-                f"   Start: {event['start']}"
-            )
-
-            print(
-                f"   End:   {event['end']}"
-            )
-
-            print(
-                f"   All day: {event['all_day']}"
-            )
-
-            print(
-                f"   Location: {event['location']}"
-            )
-
-            print()
-
-    # -----------------------------------------------------
-    # Save
-    # -----------------------------------------------------
-
     save_events(
         events
     )
 
-    print()
-    print("========================================")
-    print("COMPLETE")
-    print("========================================")
-
     print(
-        f"Done! {len(events)} events written "
-        f"to {OUTPUT_FILE}"
+        f"Published {len(events)} clan events."
     )
 
-    print()
+    print(
+        f"Skipped {skipped_birthdays} birthdays."
+    )
 
+    print(
+        f"Skipped {skipped_cancelled} cancelled events."
+    )
 
-# =========================================================
-# START
-# =========================================================
+    print(
+        f"Updated {OUTPUT_FILE} successfully."
+    )
+
 
 if __name__ == "__main__":
     main()
