@@ -4097,3 +4097,789 @@ footer {
     }
 
 }
+
+/* ================================================= */
+/* DARK OMEN BRAND THEME */
+/* ================================================= */
+
+:root {
+    --do-bg: #0d0c12;
+    --do-bg-deep: #09090e;
+
+    --do-surface: #15121b;
+    --do-surface-raised: #1b1622;
+    --do-surface-hover: #211a29;
+
+    --do-border: #352b3d;
+    --do-border-strong: #624a72;
+
+    --do-purple: #76558e;
+    --do-purple-bright: #9a6fc0;
+    --do-purple-soft: #b28bc8;
+
+    --do-blue: #78aee8;
+
+    --do-text: #f7f4f8;
+    --do-text-secondary: #aaa3b0;
+    --do-text-muted: #77717e;
+
+    --do-glow:
+        rgba(128, 82, 155, 0.18);
+}
+
+
+/* ================================================= */
+/* GLOBAL */
+/* ================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 85% 0%,
+            rgba(112, 73, 135, 0.09),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 35%,
+            rgba(64, 91, 128, 0.035),
+            transparent 28%
+        ),
+        var(--do-bg);
+
+    color: var(--do-text);
+}
+
+
+/* ================================================= */
+/* NAVIGATION */
+/* ================================================= */
+
+.site-nav {
+    background:
+        rgba(11, 10, 15, 0.96);
+
+    border-bottom:
+        1px solid var(--do-border);
+}
+
+.nav-links a {
+    color: var(--do-text-secondary);
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+
+    background:
+        #1c1722;
+}
+
+.nav-links a.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #60466f,
+            #82609a
+        );
+
+    box-shadow:
+        0 0 22px
+        rgba(126, 83, 151, 0.22);
+}
+
+
+/* ================================================= */
+/* GENERIC */
+/* ================================================= */
+
+.eyebrow,
+.section-label,
+.leadership-label,
+.step-kicker {
+    color: var(--do-purple-soft);
+}
+
+.card {
+    background:
+        linear-gradient(
+            135deg,
+            var(--do-surface-raised),
+            var(--do-surface)
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+
+/* ================================================= */
+/* HOME */
+/* ================================================= */
+
+.home-hero {
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(121, 78, 146, 0.20),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 85% 60%,
+            rgba(73, 111, 160, 0.07),
+            transparent 26%
+        ),
+        linear-gradient(
+            135deg,
+            #0a0a0f,
+            #17111c
+        );
+
+    border-bottom:
+        1px solid var(--do-border);
+}
+
+.home-hero::after {
+    background:
+        rgba(118, 85, 142, 0.07);
+}
+
+.logo-placeholder {
+    color: #c5a6d5;
+
+    border-color:
+        #594267;
+
+    background:
+        rgba(118, 85, 142, 0.08);
+}
+
+.home-hero-text,
+.section-description,
+.about-content p,
+.home-link-card p,
+.community-feature > div > p:not(.eyebrow) {
+    color:
+        var(--do-text-secondary);
+}
+
+
+/* BUTTONS */
+
+.primary-button {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #654875,
+            #8b63a3
+        );
+
+    border-color:
+        #9870ad;
+
+    box-shadow:
+        0 0 25px
+        rgba(126, 83, 151, 0.20);
+}
+
+.secondary-button {
+    color:
+        #ddd7e1;
+
+    background:
+        #19151e;
+
+    border-color:
+        #403447;
+}
+
+
+/* HOME CARDS */
+
+.home-link-card,
+.community-feature {
+    background:
+        linear-gradient(
+            135deg,
+            #18141e,
+            #121017
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.home-link-card:hover {
+    border-color:
+        var(--do-purple);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0, 0, 0, 0.30);
+}
+
+.home-card-icon {
+    border-color:
+        #60466f;
+
+    background:
+        #241a2c;
+}
+
+.card-link {
+    color:
+        var(--do-purple-soft);
+}
+
+.mini-feature {
+    background:
+        #1a1620;
+
+    border-color:
+        var(--do-border);
+}
+
+
+/* DISCORD CTA */
+
+.discord-section {
+    background:
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(118, 85, 142, 0.20),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #1c1622,
+            #121017
+        );
+
+    border-color:
+        #5e466c;
+}
+
+
+/* ================================================= */
+/* SHARED HERO AREAS */
+/* ================================================= */
+
+.leadership-hero,
+.citadel-hero,
+.events-hero {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(118, 85, 142, 0.13),
+            transparent 36%
+        );
+}
+
+.rules-hero {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(118, 85, 142, 0.11),
+            transparent 36%
+        );
+}
+
+.leadership-hero-text,
+.rules-hero-text,
+.citadel-hero-text,
+.events-hero-text {
+    color:
+        var(--do-text-secondary);
+}
+
+.hero-divider span {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #574164
+        );
+}
+
+.hero-divider span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #574164,
+            transparent
+        );
+}
+
+.hero-mark {
+    color:
+        var(--do-purple-bright);
+}
+
+
+/* ================================================= */
+/* LEADERSHIP */
+/* ================================================= */
+
+.leadership-label,
+.leadership-rank {
+    color:
+        var(--do-purple-soft);
+}
+
+.leadership-card,
+.leadership-contact {
+    background:
+        linear-gradient(
+            135deg,
+            #18141e,
+            #121017
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.leadership-card:hover {
+    border-color:
+        var(--do-border-strong);
+
+    background:
+        linear-gradient(
+            135deg,
+            #211a29,
+            #17121d
+        );
+}
+
+.leadership-card::after {
+    background:
+        rgba(128, 82, 155, 0.08);
+}
+
+.leadership-avatar {
+    color:
+        #dfcdea;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2b2033,
+            #211827
+        );
+
+    border-color:
+        #60476d;
+}
+
+.leadership-tags span {
+    color:
+        #d7c5e1;
+
+    background:
+        rgba(118, 85, 142, 0.10);
+
+    border-color:
+        #624a72;
+}
+
+
+/* Keep special leadership colours */
+
+.leadership-owner-card {
+    border-color:
+        #66552d;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(119, 92, 37, 0.12),
+            #15121b
+        );
+}
+
+
+/* ================================================= */
+/* RULES */
+/* ================================================= */
+
+.rule-row {
+    background:
+        linear-gradient(
+            135deg,
+            #18141e,
+            #121017
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.rule-row:hover {
+    border-color:
+        var(--do-border-strong);
+
+    background:
+        linear-gradient(
+            135deg,
+            #211a29,
+            #17121d
+        );
+}
+
+.rule-number {
+    background:
+        linear-gradient(
+            135deg,
+            #654875,
+            #9369aa
+        );
+
+    box-shadow:
+        0 0 18px
+        rgba(126, 83, 151, 0.18);
+}
+
+.rule-icon {
+    border-color:
+        #594267;
+
+    background:
+        linear-gradient(
+            135deg,
+            #291d31,
+            #211827
+        );
+}
+
+.rule-content p {
+    color:
+        var(--do-text-secondary);
+}
+
+.rule-highlight {
+    color:
+        #cdb8d8;
+
+    background:
+        rgba(118, 85, 142, 0.10);
+
+    border-left-color:
+        var(--do-purple-bright);
+}
+
+.rule-arrow {
+    color:
+        var(--do-purple);
+}
+
+
+/* ================================================= */
+/* CITADEL */
+/* ================================================= */
+
+.quick-flow {
+    background:
+        linear-gradient(
+            135deg,
+            #18141e,
+            #121017
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.quick-flow-number,
+.guide-step-number {
+    background:
+        linear-gradient(
+            135deg,
+            #654875,
+            #9369aa
+        );
+
+    border-color:
+        #9e77b1;
+}
+
+.quick-flow-line {
+    background:
+        linear-gradient(
+            90deg,
+            #3b3042,
+            #76558e,
+            #3b3042
+        );
+}
+
+.guide-step-line {
+    background:
+        linear-gradient(
+            #76558e,
+            rgba(118, 85, 142, 0.12)
+        );
+}
+
+.guide-media {
+    background:
+        #0c0b10;
+
+    border-color:
+        var(--do-border);
+}
+
+.guide-media figcaption {
+    color:
+        #918995;
+
+    border-top-color:
+        #302735;
+}
+
+.guide-tip {
+    background:
+        rgba(118, 85, 142, 0.08);
+
+    border-color:
+        #574164;
+}
+
+.guide-tip-icon {
+    background:
+        #251c2c;
+}
+
+.final-step-box {
+    background:
+        linear-gradient(
+            135deg,
+            #19151f,
+            #121017
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.final-step-icon {
+    background:
+        #281e30;
+}
+
+.citadel-benefits {
+    border-top-color:
+        var(--do-border);
+}
+
+.citadel-benefit-grid {
+    border-color:
+        var(--do-border);
+}
+
+.citadel-benefit {
+    background:
+        linear-gradient(
+            135deg,
+            #17131c,
+            #111016
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+
+/* ================================================= */
+/* EVENTS */
+/* ================================================= */
+
+.events-hero {
+    border-bottom-color:
+        var(--do-border);
+}
+
+.events-live-status {
+    color:
+        #aaa3b0;
+
+    background:
+        rgba(21, 18, 27, 0.72);
+
+    border-color:
+        var(--do-border);
+}
+
+.events-view-switcher {
+    background:
+        #141119;
+
+    border-color:
+        var(--do-border);
+}
+
+.events-view-button.active {
+    background:
+        linear-gradient(
+            135deg,
+            #654875,
+            #8c63a3
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(126, 83, 151, 0.18);
+}
+
+.events-count {
+    color:
+        #d3bee0;
+
+    background:
+        rgba(118, 85, 142, 0.08);
+
+    border-color:
+        #594267;
+}
+
+.event-card {
+    background:
+        linear-gradient(
+            135deg,
+            #18141e,
+            #121017
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.event-card::after {
+    background:
+        rgba(118, 85, 142, 0.06);
+}
+
+.event-card:hover {
+    border-color:
+        var(--do-border-strong);
+
+    background:
+        linear-gradient(
+            135deg,
+            #211a29,
+            #17121d
+        );
+}
+
+.event-date-block {
+    background:
+        linear-gradient(
+            135deg,
+            #291e32,
+            #211827
+        );
+
+    border-color:
+        #5a4267;
+}
+
+.event-date-month,
+.event-time,
+.event-location {
+    color:
+        #b991cd;
+}
+
+
+/* ================================================= */
+/* CALENDAR */
+/* ================================================= */
+
+.calendar-panel {
+    background:
+        linear-gradient(
+            135deg,
+            #17131c,
+            #100e14
+        );
+
+    border-color:
+        var(--do-border);
+}
+
+.calendar-header,
+.calendar-weekdays {
+    border-color:
+        var(--do-border);
+}
+
+.calendar-weekdays {
+    background:
+        #0e0c12;
+}
+
+.calendar-nav-button {
+    color:
+        #d3bde0;
+
+    background:
+        #211827;
+
+    border-color:
+        #594267;
+}
+
+.calendar-nav-button:hover {
+    background:
+        #2b2033;
+
+    border-color:
+        #76558e;
+}
+
+.calendar-day {
+    border-color:
+        #2d2533;
+}
+
+.calendar-day:hover {
+    background:
+        rgba(118, 85, 142, 0.08);
+}
+
+.calendar-day-today
+.calendar-day-number {
+    background:
+        #76558e;
+
+    box-shadow:
+        0 0 13px
+        rgba(126, 83, 151, 0.28);
+}
+
+.calendar-event-label {
+    color:
+        #d9c7e3;
+
+    background:
+        rgba(118, 85, 142, 0.12);
+
+    border-left-color:
+        #9369aa;
+}
+
+
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
+
+footer {
+    border-top-color:
+        var(--do-border);
+}
+
+.simple-footer {
+    color:
+        var(--do-text-muted);
+}
