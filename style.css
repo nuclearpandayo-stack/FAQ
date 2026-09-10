@@ -40,7 +40,6 @@ img {
 
 .container {
     width: min(1180px, 92%);
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -53,9 +52,7 @@ img {
 
 .site-nav {
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
 
     background:
@@ -143,53 +140,8 @@ img {
 
 
 /* ================================================= */
-/* SHARED HERO */
+/* GENERIC */
 /* ================================================= */
-
-.hero {
-    position: relative;
-
-    overflow: hidden;
-
-    padding:
-        78px
-        0;
-
-    background:
-        linear-gradient(
-            90deg,
-            #0b111b,
-            #111a2a
-        );
-
-    border-bottom:
-        1px solid #253047;
-}
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle at 80% 30%,
-            rgba(88, 101, 242, 0.14),
-            transparent 30%
-        );
-
-    pointer-events: none;
-}
-
-.hero-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 760px;
-}
 
 .eyebrow {
     margin-bottom: 10px;
@@ -204,46 +156,6 @@ img {
 
     letter-spacing: 3px;
 }
-
-.hero h1 {
-    margin-bottom: 18px;
-
-    font-size:
-        clamp(
-            2.4rem,
-            5vw,
-            4rem
-        );
-
-    line-height: 1.05;
-}
-
-.hero-text {
-    max-width: 680px;
-
-    color: #b6bfce;
-
-    font-size: 1.08rem;
-}
-
-
-
-/* ================================================= */
-/* MAIN */
-/* ================================================= */
-
-main {
-    padding:
-        54px
-        0
-        70px;
-}
-
-
-
-/* ================================================= */
-/* GENERIC CARD */
-/* ================================================= */
 
 .card {
     background:
@@ -298,11 +210,9 @@ main {
     position: absolute;
 
     width: 500px;
-
     height: 500px;
 
     right: -150px;
-
     top: -180px;
 
     border-radius: 50%;
@@ -316,7 +226,6 @@ main {
 
 .home-hero-inner {
     position: relative;
-
     z-index: 2;
 }
 
@@ -377,9 +286,7 @@ main {
 
 .hero-buttons {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
 }
 
@@ -388,7 +295,6 @@ main {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     padding:
@@ -466,10 +372,6 @@ main {
     color: #919bab;
 }
 
-
-
-/* HOME ABOUT */
-
 .about-card {
     display: grid;
 
@@ -536,10 +438,6 @@ main {
     color: #707b8e;
 }
 
-
-
-/* HOME CARDS */
-
 .home-card-grid {
     display: grid;
 
@@ -595,7 +493,6 @@ main {
 
 .home-card-icon {
     width: 52px;
-
     height: 52px;
 
     display: flex;
@@ -636,10 +533,6 @@ main {
 
     font-weight: 700;
 }
-
-
-
-/* HOME COMMUNITY */
 
 .community-feature {
     display: grid;
@@ -719,10 +612,6 @@ main {
     font-size: 0.82rem;
 }
 
-
-
-/* DISCORD */
-
 .discord-section {
     display: flex;
 
@@ -762,7 +651,6 @@ main {
 
 .discord-icon {
     width: 64px;
-
     height: 64px;
 
     flex-shrink: 0;
@@ -854,11 +742,9 @@ main {
     position: absolute;
 
     width: 130px;
-
     height: 130px;
 
     right: -50px;
-
     top: -50px;
 
     border-radius: 50%;
@@ -888,7 +774,6 @@ main {
 
 .leader-icon {
     width: 58px;
-
     height: 58px;
 
     flex-shrink: 0;
@@ -970,10 +855,6 @@ main {
     font-size: 0.75rem;
 }
 
-
-
-/* OWNER */
-
 .leader-owner .leader-icon {
     background:
         linear-gradient(
@@ -999,10 +880,6 @@ main {
     border-color:
         #a47f37;
 }
-
-
-
-/* OVERSEER */
 
 .rank-overseer {
     border-color:
@@ -1034,10 +911,6 @@ main {
     border-color:
         #438a93;
 }
-
-
-
-/* COORDINATOR */
 
 .rank-coordinator {
     border-color:
@@ -1073,7 +946,7 @@ main {
 
 
 /* ================================================= */
-/* NEW RULES PAGE */
+/* RULES PAGE */
 /* ================================================= */
 
 .rules-hero {
@@ -1161,10 +1034,6 @@ main {
     line-height: 1;
 }
 
-
-
-/* Rules content area */
-
 .rules-page-main {
     padding:
         0
@@ -1175,10 +1044,6 @@ main {
 .rules-container {
     max-width: 1000px;
 }
-
-
-
-/* Individual rule */
 
 .rule-row {
     position: relative;
@@ -1234,13 +1099,8 @@ main {
         );
 }
 
-
-
-/* Number circle */
-
 .rule-number {
     width: 46px;
-
     height: 46px;
 
     display: flex;
@@ -1271,13 +1131,8 @@ main {
         rgba(88, 101, 242, 0.14);
 }
 
-
-
-/* Icon square */
-
 .rule-icon {
     width: 58px;
-
     height: 58px;
 
     display: flex;
@@ -1302,10 +1157,6 @@ main {
 
     font-size: 1.45rem;
 }
-
-
-
-/* Rule text */
 
 .rule-content {
     min-width: 0;
@@ -1335,10 +1186,6 @@ main {
     margin-bottom: 0;
 }
 
-
-
-/* Highlight inside capping rule */
-
 .rule-highlight {
     margin-top: 8px;
 
@@ -1359,10 +1206,6 @@ main {
     font-size: 0.86rem;
 }
 
-
-
-/* Decorative arrow */
-
 .rule-arrow {
     color: #5e70dc;
 
@@ -1374,10 +1217,6 @@ main {
 
     opacity: 0.8;
 }
-
-
-
-/* Admin notice */
 
 .admin-notice {
     display: flex;
@@ -1405,7 +1244,6 @@ main {
 
 .admin-notice-icon {
     width: 48px;
-
     height: 48px;
 
     display: flex;
@@ -1462,71 +1300,124 @@ main {
 
 
 /* ================================================= */
-/* CITADEL GUIDE */
+/* CITADEL PAGE - NEW WALKTHROUGH */
 /* ================================================= */
 
-.quick-guide {
-    margin-bottom: 35px;
+.citadel-hero {
+    padding:
+        44px
+        0
+        24px;
 
-    padding: 28px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(88, 101, 242, 0.10),
+            transparent 34%
+        );
+}
+
+.citadel-hero-inner {
+    max-width: 850px;
+}
+
+.citadel-hero h1 {
+    margin-bottom: 10px;
+
+    font-size:
+        clamp(
+            2.4rem,
+            5vw,
+            3.8rem
+        );
+
+    line-height: 1.08;
+}
+
+.citadel-hero-text {
+    max-width: 680px;
+
+    margin:
+        0
+        auto;
+
+    color: #aeb8ca;
+
+    font-size: 1.04rem;
+}
+
+.citadel-page-main {
+    padding:
+        0
+        0
+        70px;
+}
+
+.citadel-container {
+    max-width: 1040px;
+}
+
+
+
+/* QUICK FLOW */
+
+.quick-flow {
+    margin-bottom: 58px;
+
+    padding:
+        24px
+        26px;
 
     background:
         linear-gradient(
             135deg,
-            #151d2b,
-            #111722
+            #111a29,
+            #0e1623
         );
 
     border:
-        1px solid #2f3a50;
+        1px solid #2b3952;
 
     border-radius: 14px;
 }
 
-.quick-guide h2 {
-    margin-bottom: 8px;
+.section-label {
+    margin-bottom: 20px;
+
+    color: #818fff;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    text-align: center;
 }
 
-.quick-guide p {
-    color: #b9c1ce;
-}
-
-.steps {
+.quick-flow-track {
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    gap: 20px;
+    justify-content: space-between;
+
+    gap: 10px;
 }
 
-.step-card {
-    display: grid;
+.quick-flow-step {
+    min-width: 110px;
 
-    grid-template-columns:
-        60px
-        1fr;
-
-    gap: 20px;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #151d2b,
-            #111722
-        );
-
-    border:
-        1px solid #2f3a50;
-
-    border-radius: 14px;
+    text-align: center;
 }
 
-.step-number {
-    width: 50px;
-
-    height: 50px;
+.quick-flow-number {
+    width: 42px;
+    height: 42px;
 
     display: flex;
 
@@ -1534,150 +1425,467 @@ main {
 
     justify-content: center;
 
-    border-radius: 12px;
+    margin:
+        0
+        auto
+        9px;
+
+    border-radius: 50%;
+
+    color: #ffffff;
 
     background:
         linear-gradient(
             135deg,
-            #4f5fe8,
-            #6d79ff
+            #4051ca,
+            #6170ef
         );
+
+    font-size: 0.82rem;
 
     font-weight: 700;
 }
 
-.step-content h2 {
-    margin-bottom: 10px;
+.quick-flow-title {
+    margin-bottom: 2px;
 
-    font-size: 1.45rem;
+    color: #ffffff;
+
+    font-weight: 700;
 }
 
-.step-content p {
-    margin-bottom: 14px;
+.quick-flow-text {
+    color: #8995a9;
 
-    color: #bac2ce;
+    font-size: 0.78rem;
 }
 
-.tip,
-.success {
-    margin: 16px 0;
+.quick-flow-line {
+    height: 1px;
 
-    padding:
-        13px
-        15px;
+    flex: 1;
 
-    border-radius: 8px;
-}
-
-.tip {
-    background: #182132;
-
-    border-left:
-        3px solid #7481ff;
-}
-
-.success {
-    background: #14271f;
-
-    border-left:
-        3px solid #55d997;
+    background:
+        linear-gradient(
+            90deg,
+            #344266,
+            #5261a8,
+            #344266
+        );
 }
 
 
 
-/* Guide images */
+/* GUIDE STEP */
 
-.guide-image-wrapper {
-    margin-top: 18px;
+.guide-step {
+    display: grid;
+
+    grid-template-columns:
+        68px
+        minmax(0, 1fr);
+
+    gap: 24px;
+
+    position: relative;
 }
 
-.guide-image {
-    width: 100%;
+.guide-step-marker {
+    display: flex;
 
-    height: auto;
+    flex-direction: column;
 
-    display: block;
+    align-items: center;
+}
+
+.guide-step-number {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4051ca,
+            #6170ef
+        );
 
     border:
-        1px solid #2c374c;
+        1px solid #7180ff;
 
-    border-radius: 10px;
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 22px
+        rgba(88, 101, 242, 0.14);
 }
 
-.image-caption {
-    margin-top: 7px;
+.guide-step-line {
+    width: 1px;
 
-    color: #788396;
+    flex: 1;
 
-    text-align: center;
+    min-height: 65px;
 
-    font-size: 0.85rem;
+    margin-top: 8px;
+
+    background:
+        linear-gradient(
+            #47579d,
+            rgba(71, 87, 157, 0.15)
+        );
 }
 
-.image-small {
-    max-width: 650px;
-
-    margin-left: auto;
-
-    margin-right: auto;
+.guide-step-content {
+    padding-bottom: 62px;
 }
 
-.image-portrait {
-    max-width: 380px;
+.guide-step-last .guide-step-content {
+    padding-bottom: 30px;
+}
 
-    margin-left: auto;
+.guide-step-heading {
+    margin-bottom: 12px;
+}
 
-    margin-right: auto;
+.step-kicker {
+    margin-bottom: 3px;
+
+    color: #7888ee;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.8px;
+}
+
+.guide-step-heading h2 {
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            1.55rem,
+            3vw,
+            2rem
+        );
+
+    line-height: 1.2;
+}
+
+.guide-step-intro {
+    max-width: 760px;
+
+    margin-bottom: 22px;
+
+    color: #b1bac8;
+
+    font-size: 0.97rem;
 }
 
 
 
-/* Citadel benefits */
+/* MEDIA */
 
-.benefits {
-    margin-top: 55px;
-}
-
-.benefits > h2 {
-    margin-bottom: 20px;
-
-    font-size: 1.8rem;
-}
-
-.benefit-grid {
+.guide-media-grid {
     display: grid;
 
     grid-template-columns:
         repeat(
             2,
-            1fr
+            minmax(0, 1fr)
         );
 
     gap: 18px;
+
+    margin-top: 18px;
 }
 
-.benefit-card {
-    padding: 22px;
+.guide-media {
+    overflow: hidden;
+
+    background:
+        #0e1622;
+
+    border:
+        1px solid #2a3850;
+
+    border-radius: 12px;
+}
+
+.guide-media img {
+    width: 100%;
+
+    display: block;
+
+    background:
+        #080d14;
+}
+
+.guide-media figcaption {
+    padding:
+        10px
+        12px;
+
+    color: #8490a3;
+
+    font-size: 0.8rem;
+
+    line-height: 1.45;
+
+    border-top:
+        1px solid #253247;
+}
+
+.guide-media-wide {
+    max-width: 820px;
+}
+
+.guide-media-portrait {
+    max-width: 360px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* TIP / SUCCESS */
+
+.guide-tip,
+.guide-success {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-top: 18px;
+
+    padding:
+        14px
+        16px;
+
+    border-radius: 10px;
+}
+
+.guide-tip {
+    background:
+        rgba(88, 101, 242, 0.08);
+
+    border:
+        1px solid #344570;
+}
+
+.guide-success {
+    background:
+        rgba(69, 196, 134, 0.07);
+
+    border:
+        1px solid #28543f;
+}
+
+.guide-tip-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background:
+        #1c2740;
+}
+
+.guide-success .guide-tip-icon {
+    background:
+        #173429;
+}
+
+.guide-tip strong,
+.guide-success strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #f4f6fb;
+
+    font-size: 0.9rem;
+}
+
+.guide-tip p,
+.guide-success p {
+    color: #9eabba;
+
+    font-size: 0.84rem;
+}
+
+
+
+/* FINAL STEP */
+
+.final-step-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    max-width: 700px;
+
+    padding:
+        16px
+        18px;
 
     background:
         linear-gradient(
             135deg,
-            #151d2b,
-            #111722
+            #131d2c,
+            #101722
         );
 
     border:
-        1px solid #2f3a50;
+        1px solid #2c3a53;
+
+    border-radius: 11px;
+}
+
+.final-step-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background:
+        #1c2944;
+}
+
+.final-step-box strong {
+    color: #ffffff;
+}
+
+.final-step-box p {
+    color: #9faabb;
+
+    font-size: 0.88rem;
+}
+
+
+
+/* BENEFITS */
+
+.citadel-benefits {
+    margin-top: 38px;
+
+    padding-top: 42px;
+
+    border-top:
+        1px solid #263247;
+}
+
+.citadel-benefits-heading {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.citadel-benefits-heading h2 {
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            2.5rem
+        );
+}
+
+.citadel-benefit-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 0;
+
+    border:
+        1px solid #2b3850;
 
     border-radius: 14px;
+
+    overflow: hidden;
 }
 
-.benefit-card h3 {
-    margin-bottom: 8px;
+.citadel-benefit {
+    padding:
+        24px
+        20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #121a28,
+            #0f1723
+        );
+
+    border-right:
+        1px solid #2a374d;
 }
 
-.benefit-card p {
-    color: #b8c0cd;
+.citadel-benefit:last-child {
+    border-right: none;
+}
+
+.citadel-benefit-icon {
+    margin-bottom: 10px;
+
+    font-size: 1.45rem;
+}
+
+.citadel-benefit h3 {
+    margin-bottom: 5px;
+
+    font-size: 1rem;
+}
+
+.citadel-benefit p {
+    color: #8d98a9;
+
+    font-size: 0.8rem;
+
+    line-height: 1.45;
 }
 
 
@@ -1728,6 +1936,24 @@ footer {
         align-items: flex-start;
     }
 
+    .citadel-benefit-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+    .citadel-benefit:nth-child(2) {
+        border-right: none;
+    }
+
+    .citadel-benefit:nth-child(1),
+    .citadel-benefit:nth-child(2) {
+        border-bottom:
+            1px solid #2a374d;
+    }
+
 }
 
 
@@ -1743,7 +1969,7 @@ footer {
     }
 
 
-    /* Navigation */
+    /* NAV */
 
     .site-nav {
         position: relative;
@@ -1788,33 +2014,7 @@ footer {
     }
 
 
-    /* Standard Hero */
-
-    .hero {
-        padding:
-            48px
-            0;
-    }
-
-    .hero h1 {
-        font-size:
-            clamp(
-                2.2rem,
-                10vw,
-                3rem
-            );
-    }
-
-
-    main {
-        padding:
-            32px
-            0
-            50px;
-    }
-
-
-    /* Home */
+    /* HOME */
 
     .home-hero {
         min-height: auto;
@@ -1863,7 +2063,7 @@ footer {
     }
 
 
-    /* Leadership */
+    /* LEADERSHIP */
 
     .leadership-grid {
         grid-template-columns: 1fr;
@@ -1890,7 +2090,7 @@ footer {
     }
 
 
-    /* RULES HERO */
+    /* RULES */
 
     .rules-hero {
         padding:
@@ -1906,9 +2106,6 @@ footer {
     .rules-hero-text {
         font-size: 0.95rem;
     }
-
-
-    /* Rules cards */
 
     .rule-row {
         grid-template-columns:
@@ -1968,22 +2165,122 @@ footer {
     }
 
 
-    /* Citadel */
+    /* CITADEL */
 
-    .step-card {
-        grid-template-columns: 1fr;
-
-        padding: 18px;
+    .citadel-hero {
+        padding:
+            34px
+            0
+            18px;
     }
 
-    .step-number {
-        width: 44px;
-
-        height: 44px;
+    .citadel-hero h1 {
+        font-size: 2.45rem;
     }
 
-    .benefit-grid {
+    .citadel-hero-text {
+        font-size: 0.95rem;
+    }
+
+    .quick-flow {
+        padding:
+            18px
+            16px;
+    }
+
+    .quick-flow-track {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+    .quick-flow-step {
+        display: grid;
+
+        grid-template-columns:
+            42px
+            80px
+            minmax(0, 1fr);
+
+        align-items: center;
+
+        gap: 12px;
+
+        text-align: left;
+    }
+
+    .quick-flow-number {
+        margin: 0;
+    }
+
+    .quick-flow-line {
+        width: 1px;
+
+        height: 16px;
+
+        margin-left: 21px;
+
+        flex: none;
+    }
+
+    .guide-step {
+        grid-template-columns:
+            48px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+    .guide-step-number {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 0.8rem;
+    }
+
+    .guide-step-content {
+        padding-bottom: 46px;
+    }
+
+    .guide-media-grid {
         grid-template-columns: 1fr;
+    }
+
+    .guide-step-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .guide-step-intro {
+        font-size: 0.92rem;
+    }
+
+    .guide-media figcaption {
+        font-size: 0.76rem;
+    }
+
+    .guide-tip,
+    .guide-success {
+        padding:
+            12px
+            13px;
+    }
+
+    .citadel-benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .citadel-benefit {
+        border-right: none;
+
+        border-bottom:
+            1px solid #2a374d;
+    }
+
+    .citadel-benefit:last-child {
+        border-bottom: none;
     }
 
 }
@@ -2008,11 +2305,6 @@ footer {
         gap: 12px;
     }
 
-    /*
-        Hide the icon on very narrow phones.
-        Number + content stays clean.
-    */
-
     .rule-icon {
         display: none;
     }
@@ -2025,9 +2317,33 @@ footer {
         font-size: 0.85rem;
     }
 
-    .rule-content h2 {
-        font-size: 1rem;
+    .guide-step {
+        grid-template-columns:
+            40px
+            minmax(0, 1fr);
+
+        gap: 10px;
+    }
+
+    .guide-step-number {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 0.72rem;
+    }
+
+    .quick-flow-step {
+        grid-template-columns:
+            38px
+            70px
+            minmax(0, 1fr);
+    }
+
+    .quick-flow-number {
+        width: 36px;
+
+        height: 36px;
     }
 
 }
-
