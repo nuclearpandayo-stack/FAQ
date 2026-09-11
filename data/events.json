@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-11T19:47:46Z",
+  "generated_at": "2026-09-11T21:59:14Z",
   "event_count": 42,
   "events": [
     {
@@ -9,16 +9,6 @@
       "start": "2026-08-10",
       "end": "2026-09-22",
       "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-09-04T19:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
-      "start": "2026-09-04T19:00:00Z",
-      "end": "2026-09-04T20:00:00Z",
-      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -41,6 +31,16 @@
       "all_day": false,
       "description": "",
       "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4dntv6f74d08ljv9v9je2hq27b@google.com::2026-09-12T16:00:00Z",
+      "title": "5pm GMT - PVM Event - Vorago",
+      "start": "2026-09-12T16:00:00Z",
+      "end": "2026-09-12T17:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "W123",
       "status": "confirmed"
     },
     {
