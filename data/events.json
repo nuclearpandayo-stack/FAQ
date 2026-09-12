@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-12T20:56:33Z",
-  "event_count": 43,
+  "generated_at": "2026-09-12T22:43:27Z",
+  "event_count": 42,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -9,16 +9,6 @@
       "start": "2026-08-10",
       "end": "2026-09-22",
       "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-09-05T20:00:00Z",
-      "title": "Dungeoneering  - 9PM GMT",
-      "start": "2026-09-05T20:00:00Z",
-      "end": "2026-09-05T21:00:00Z",
-      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
