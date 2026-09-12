@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-12T18:42:03Z",
-  "event_count": 42,
+  "generated_at": "2026-09-12T20:56:33Z",
+  "event_count": 43,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -418,6 +418,16 @@
       "title": "CITADEL CAPPING RESET",
       "start": "2026-12-07T21:00:00Z",
       "end": "2026-12-07T21:30:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-12-11T20:00:00Z",
+      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "start": "2026-12-11T20:00:00Z",
+      "end": "2026-12-11T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
