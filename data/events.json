@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-13T17:09:44Z",
-  "event_count": 42,
+  "generated_at": "2026-09-13T19:25:48Z",
+  "event_count": 43,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -418,6 +418,16 @@
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-12-11T20:00:00Z",
       "end": "2026-12-11T21:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-12-12T19:00:00Z",
+      "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
+      "start": "2026-12-12T19:00:00Z",
+      "end": "2026-12-12T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
