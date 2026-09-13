@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-13T19:25:48Z",
-  "event_count": 43,
+  "generated_at": "2026-09-13T21:30:17Z",
+  "event_count": 44,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -428,6 +428,16 @@
       "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
       "start": "2026-12-12T19:00:00Z",
       "end": "2026-12-12T21:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-12-12T21:00:00Z",
+      "title": "Dungeoneering - 9PM Gametime",
+      "start": "2026-12-12T21:00:00Z",
+      "end": "2026-12-12T22:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
