@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-14T06:16:06Z",
+  "generated_at": "2026-09-14T12:50:14Z",
   "event_count": 44,
   "events": [
     {
@@ -14,10 +14,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-07T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-09-07T21:00:00Z",
-      "end": "2026-09-07T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-07T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-09-07T20:00:00Z",
+      "end": "2026-09-07T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -54,10 +54,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-14T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-09-14T21:00:00Z",
-      "end": "2026-09-14T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-14T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-09-14T20:00:00Z",
+      "end": "2026-09-14T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -84,10 +84,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-21T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-09-21T21:00:00Z",
-      "end": "2026-09-21T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-21T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-09-21T20:00:00Z",
+      "end": "2026-09-21T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -104,10 +104,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-28T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-09-28T21:00:00Z",
-      "end": "2026-09-28T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-28T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-09-28T20:00:00Z",
+      "end": "2026-09-28T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -134,10 +134,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-05T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-10-05T21:00:00Z",
-      "end": "2026-10-05T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-05T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-10-05T20:00:00Z",
+      "end": "2026-10-05T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -174,10 +174,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-12T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-10-12T21:00:00Z",
-      "end": "2026-10-12T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-12T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-10-12T20:00:00Z",
+      "end": "2026-10-12T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -204,10 +204,10 @@
       "status": "confirmed"
     },
     {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-19T21:00:00Z",
-      "title": "CITADEL CAPPING RESET",
-      "start": "2026-10-19T21:00:00Z",
-      "end": "2026-10-19T22:00:00Z",
+      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-19T20:00:00Z",
+      "title": "9PM GMT CITADEL CAPPING RESET",
+      "start": "2026-10-19T20:00:00Z",
+      "end": "2026-10-19T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
