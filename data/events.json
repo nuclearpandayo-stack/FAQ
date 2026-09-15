@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-14T21:48:15Z",
+  "generated_at": "2026-09-15T00:00:49Z",
   "event_count": 43,
   "events": [
     {
@@ -135,7 +135,7 @@
     },
     {
       "id": "5mkt5avooo5d4lm5bm40mtp145@google.com::2026-10-09T06:00:00Z",
-      "title": "7PM GMT - VC Party - Movie Night",
+      "title": "7PM GMT - VC Party - Movie Night ''Spooky movie''",
       "start": "2026-10-09T06:00:00Z",
       "end": "2026-10-09T06:30:00Z",
       "all_day": false,
