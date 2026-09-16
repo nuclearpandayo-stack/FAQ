@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-15T23:33:03Z",
-  "event_count": 44,
+  "generated_at": "2026-09-16T01:34:59Z",
+  "event_count": 46,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -84,10 +84,30 @@
       "status": "confirmed"
     },
     {
+      "id": "5g71gq7002bln8dq2962bmd05l@google.com::2026-09-26T19:00:00Z",
+      "title": "8pm GMT - VC Party - Drunk Bingo",
+      "start": "2026-09-26T19:00:00Z",
+      "end": "2026-09-26T20:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-09-26T20:00:00Z",
       "title": "Castlewars - 9PM GMT",
       "start": "2026-09-26T20:00:00Z",
       "end": "2026-09-26T21:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "2cgs04nceq2ee4k35fqmdv26d2@google.com::2026-09-26T21:00:00Z",
+      "title": "10PM GMT - VC Parties - Drunk Geoguessr",
+      "start": "2026-09-26T21:00:00Z",
+      "end": "2026-09-26T22:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
