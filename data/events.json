@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-19T18:35:02Z",
-  "event_count": 45,
+  "generated_at": "2026-09-19T20:56:48Z",
+  "event_count": 44,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -9,16 +9,6 @@
       "start": "2026-08-10",
       "end": "2026-09-22",
       "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-09-12T18:00:00Z",
-      "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
-      "start": "2026-09-12T18:00:00Z",
-      "end": "2026-09-12T20:00:00Z",
-      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
