@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-20T19:12:47Z",
+  "generated_at": "2026-09-20T21:31:13Z",
   "event_count": 44,
   "events": [
     {
@@ -9,16 +9,6 @@
       "start": "2026-08-10",
       "end": "2026-09-22",
       "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "3or5vt5267ndomdq7lmaitlecu@google.com::2026-09-13T20:00:00Z",
-      "title": "9PM GMT - SUS Sundays VC Parties",
-      "start": "2026-09-13T20:00:00Z",
-      "end": "2026-09-13T21:00:00Z",
-      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -438,6 +428,16 @@
       "title": "CITADEL CAPPING RESET",
       "start": "2026-12-14T21:00:00Z",
       "end": "2026-12-14T21:30:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2026-12-19T21:00:00Z",
+      "title": "Castlewars - 9PM gametime",
+      "start": "2026-12-19T21:00:00Z",
+      "end": "2026-12-19T21:30:00Z",
       "all_day": false,
       "description": "",
       "location": "",
