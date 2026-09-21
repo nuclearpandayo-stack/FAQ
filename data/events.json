@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-21T18:27:56Z",
-  "event_count": 44,
+  "generated_at": "2026-09-21T22:05:37Z",
+  "event_count": 43,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -9,16 +9,6 @@
       "start": "2026-08-10",
       "end": "2026-09-22",
       "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-14T20:00:00Z",
-      "title": "9PM GMT CITADEL CAPPING RESET",
-      "start": "2026-09-14T20:00:00Z",
-      "end": "2026-09-14T21:00:00Z",
-      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
