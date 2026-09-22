@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-22T18:16:41Z",
-  "event_count": 43,
+  "generated_at": "2026-09-22T21:21:25Z",
+  "event_count": 44,
   "events": [
     {
       "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
@@ -428,6 +428,16 @@
       "title": "Castlewars - 9PM gametime",
       "start": "2026-12-19T21:00:00Z",
       "end": "2026-12-19T21:30:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "1col6otvisg79023j3c87te494@google.com::2026-12-21T21:00:00Z",
+      "title": "CITADEL CAPPING RESET",
+      "start": "2026-12-21T21:00:00Z",
+      "end": "2026-12-21T21:30:00Z",
       "all_day": false,
       "description": "",
       "location": "",
