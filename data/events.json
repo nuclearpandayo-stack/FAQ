@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-09-28T23:30:54Z",
-  "event_count": 44,
+  "generated_at": "2026-09-29T02:39:59Z",
+  "event_count": 43,
   "events": [
-    {
-      "id": "1g7bups3u21neo8l26sjlbe9i1@google.com::2026-08-10",
-      "title": "RS Event - LEAGUES",
-      "start": "2026-08-10",
-      "end": "2026-09-22",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "5g71gq7002bln8dq2962bmd05l@google.com::2026-09-26T19:00:00Z",
       "title": "8pm GMT - VC Party - Drunk Bingo",
