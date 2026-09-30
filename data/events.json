@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-09-30T20:03:34Z",
-  "event_count": 44,
+  "generated_at": "2026-09-30T23:39:36Z",
+  "event_count": 47,
   "events": [
     {
       "id": "5g71gq7002bln8dq2962bmd05l@google.com::2026-09-26T19:00:00Z",
@@ -39,6 +39,16 @@
       "start": "2026-09-28T20:00:00Z",
       "end": "2026-09-28T21:00:00Z",
       "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "3ogunf66lbed3hbuuhm94rf0qe@google.com::2026-10-01",
+      "title": "Start of Monthly Recruitment Raffle",
+      "start": "2026-10-01",
+      "end": "2026-10-02",
+      "all_day": true,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -184,6 +194,16 @@
       "status": "confirmed"
     },
     {
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2026-11-01",
+      "title": "Draw Monthly recruitment raffle",
+      "start": "2026-11-01",
+      "end": "2026-11-02",
+      "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-11-02T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-02T21:00:00Z",
@@ -319,6 +339,16 @@
       "start": "2026-11-30T21:00:00Z",
       "end": "2026-11-30T21:30:00Z",
       "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2026-12-01",
+      "title": "Draw Monthly recruitment raffle",
+      "start": "2026-12-01",
+      "end": "2026-12-02",
+      "all_day": true,
       "description": "",
       "location": "",
       "status": "confirmed"
