@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-01T16:19:31Z",
-  "event_count": 47,
+  "generated_at": "2026-10-01T21:04:20Z",
+  "event_count": 46,
   "events": [
     {
       "id": "5g71gq7002bln8dq2962bmd05l@google.com::2026-09-26T19:00:00Z",
@@ -98,16 +98,6 @@
       "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
       "start": "2026-10-10T18:00:00Z",
       "end": "2026-10-10T20:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
-      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-10-10T20:00:00Z",
-      "title": "Castlewars - 9PM GMT",
-      "start": "2026-10-10T20:00:00Z",
-      "end": "2026-10-10T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
