@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-03T05:42:59Z",
-  "event_count": 47,
+  "generated_at": "2026-10-03T10:36:31Z",
+  "event_count": 48,
   "events": [
     {
       "id": "5g71gq7002bln8dq2962bmd05l@google.com::2026-09-26T19:00:00Z",
@@ -469,6 +469,16 @@
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "5mkt5avooo5d4lm5bm40mtp145@google.com::2027-01-01T07:00:00Z",
+      "title": "7PM GMT - VC Party - Movie Night",
+      "start": "2027-01-01T07:00:00Z",
+      "end": "2027-01-01T07:30:00Z",
+      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
