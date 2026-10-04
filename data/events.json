@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-04T18:29:27Z",
-  "event_count": 40,
+  "generated_at": "2026-10-04T21:45:31Z",
+  "event_count": 41,
   "events": [
     {
       "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-28T20:00:00Z",
@@ -399,6 +399,16 @@
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2027-01-02T21:00:00Z",
+      "title": "Castlewars - 9PM gametime",
+      "start": "2027-01-02T21:00:00Z",
+      "end": "2027-01-02T21:30:00Z",
+      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
