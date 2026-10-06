@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T12:31:28Z",
-  "event_count": 41,
+  "generated_at": "2026-10-06T01:25:38Z",
+  "event_count": 40,
   "events": [
-    {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-09-28T20:00:00Z",
-      "title": "9PM GMT CITADEL CAPPING RESET",
-      "start": "2026-09-28T20:00:00Z",
-      "end": "2026-09-28T21:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "3ogunf66lbed3hbuuhm94rf0qe@google.com::2026-10-01",
       "title": "Start of Monthly Recruitment Raffle",
