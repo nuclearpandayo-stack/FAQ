@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-09T17:04:29Z",
-  "event_count": 40,
+  "generated_at": "2026-10-09T21:34:46Z",
+  "event_count": 39,
   "events": [
-    {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-02T19:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
-      "start": "2026-10-02T19:00:00Z",
-      "end": "2026-10-02T20:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-10-03T20:00:00Z",
       "title": "Dungeoneering  - 9PM GMT",
