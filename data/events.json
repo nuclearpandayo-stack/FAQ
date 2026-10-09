@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T23:49:03Z",
-  "event_count": 41,
+  "generated_at": "2026-10-09T03:07:23Z",
+  "event_count": 40,
   "events": [
-    {
-      "id": "3ogunf66lbed3hbuuhm94rf0qe@google.com::2026-10-01",
-      "title": "Start of Monthly Recruitment Raffle",
-      "start": "2026-10-01",
-      "end": "2026-10-02",
-      "all_day": true,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-02T19:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
