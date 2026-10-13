@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-12T19:02:20Z",
-  "event_count": 41,
+  "generated_at": "2026-10-13T01:12:26Z",
+  "event_count": 40,
   "events": [
-    {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-05T20:00:00Z",
-      "title": "9PM GMT CITADEL CAPPING RESET",
-      "start": "2026-10-05T20:00:00Z",
-      "end": "2026-10-05T21:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-10-10T18:00:00Z",
       "title": "7PM GMT - MOVIE  - VC Party - ''Spooky Movie'' Movie stream",
@@ -35,7 +25,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-16T19:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Zamorak EU PVM Events - Void & Yung",
       "start": "2026-10-16T19:00:00Z",
       "end": "2026-10-16T20:00:00Z",
       "all_day": false,
