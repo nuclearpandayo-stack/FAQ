@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T20:41:36Z",
-  "event_count": 40,
+  "generated_at": "2026-10-13T23:52:13Z",
+  "event_count": 41,
   "events": [
     {
       "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-10-10T18:00:00Z",
@@ -398,6 +398,16 @@
       "title": "Dungeoneering - 9PM Gametime",
       "start": "2027-01-09T21:00:00Z",
       "end": "2027-01-09T22:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "1col6otvisg79023j3c87te494@google.com::2027-01-11T21:00:00Z",
+      "title": "CITADEL CAPPING RESET",
+      "start": "2027-01-11T21:00:00Z",
+      "end": "2027-01-11T21:30:00Z",
       "all_day": false,
       "description": "",
       "location": "",
