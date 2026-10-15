@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T16:11:28Z",
-  "event_count": 41,
+  "generated_at": "2026-10-15T19:51:58Z",
+  "event_count": 48,
   "events": [
     {
       "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-10-10T18:00:00Z",
@@ -19,6 +19,16 @@
       "start": "2026-10-12T20:00:00Z",
       "end": "2026-10-12T21:00:00Z",
       "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-10-15",
+      "title": "Raven day (Priff)",
+      "start": "2026-10-15",
+      "end": "2026-10-16",
+      "all_day": true,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -69,6 +79,16 @@
       "start": "2026-10-26T21:00:00Z",
       "end": "2026-10-26T21:30:00Z",
       "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-10-28",
+      "title": "Raven day (Priff)",
+      "start": "2026-10-28",
+      "end": "2026-10-29",
+      "all_day": true,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -134,6 +154,16 @@
       "status": "confirmed"
     },
     {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-10",
+      "title": "Raven day (Priff)",
+      "start": "2026-11-10",
+      "end": "2026-11-11",
+      "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-11-13T20:00:00Z",
       "title": "8PM GMT - EU PVM Events - Void & Yung",
       "start": "2026-11-13T20:00:00Z",
@@ -169,6 +199,16 @@
       "start": "2026-11-21T21:00:00Z",
       "end": "2026-11-21T21:30:00Z",
       "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
+      "title": "Raven day (Priff)",
+      "start": "2026-11-23",
+      "end": "2026-11-24",
+      "all_day": true,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -244,6 +284,16 @@
       "status": "confirmed"
     },
     {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-12-06",
+      "title": "Raven day (Priff)",
+      "start": "2026-12-06",
+      "end": "2026-12-07",
+      "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-12-07T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-12-07T21:00:00Z",
@@ -294,6 +344,16 @@
       "status": "confirmed"
     },
     {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-12-19",
+      "title": "Raven day (Priff)",
+      "start": "2026-12-19",
+      "end": "2026-12-20",
+      "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2026-12-19T21:00:00Z",
       "title": "Castlewars - 9PM gametime",
       "start": "2026-12-19T21:00:00Z",
@@ -339,6 +399,16 @@
       "start": "2026-12-28T21:00:00Z",
       "end": "2026-12-28T21:30:00Z",
       "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
+      "title": "Raven day (Priff)",
+      "start": "2027-01-01",
+      "end": "2027-01-02",
+      "all_day": true,
       "description": "",
       "location": "",
       "status": "confirmed"
