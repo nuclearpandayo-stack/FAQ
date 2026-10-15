@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T19:51:58Z",
-  "event_count": 48,
+  "generated_at": "2026-10-15T22:42:06Z",
+  "event_count": 54,
   "events": [
     {
       "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-10-10T18:00:00Z",
@@ -44,10 +44,10 @@
       "status": "confirmed"
     },
     {
-      "id": "17lms2m5hi7d8cc37s28psb5ju@google.com::2026-10-17T20:00:00Z",
-      "title": "Dungeoneering  - 9PM GMT",
-      "start": "2026-10-17T20:00:00Z",
-      "end": "2026-10-17T21:00:00Z",
+      "id": "hf1qg887s11tv4kstd8lqoc0re@google.com::2026-10-18T17:00:00Z",
+      "title": "Dungeoneering  - 6PM GMT",
+      "start": "2026-10-18T17:00:00Z",
+      "end": "2026-10-18T18:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -64,10 +64,10 @@
       "status": "confirmed"
     },
     {
-      "id": "001q4t9v7imhuj95qm2lrrrbqa@google.com::2026-10-24T20:00:00Z",
-      "title": "Castlewars - 9PM GMT",
-      "start": "2026-10-24T20:00:00Z",
-      "end": "2026-10-24T21:00:00Z",
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2026-10-25T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2026-10-25T18:00:00Z",
+      "end": "2026-10-25T19:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -104,21 +104,21 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-10-31T21:00:00Z",
-      "title": "Dungeoneering - 9PM Gametime",
-      "start": "2026-10-31T21:00:00Z",
-      "end": "2026-10-31T22:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
-    {
       "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2026-11-01",
       "title": "Draw Monthly recruitment raffle",
       "start": "2026-11-01",
       "end": "2026-11-02",
       "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-01T21:00:00Z",
+      "title": "Dungeoneering - 6PM Gametime",
+      "start": "2026-11-01T21:00:00Z",
+      "end": "2026-11-01T22:00:00Z",
+      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
@@ -138,6 +138,16 @@
       "title": "Castlewars - 9PM gametime",
       "start": "2026-11-07T21:00:00Z",
       "end": "2026-11-07T21:30:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2026-11-08T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2026-11-08T18:00:00Z",
+      "end": "2026-11-08T19:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -184,6 +194,16 @@
       "status": "confirmed"
     },
     {
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-15T21:00:00Z",
+      "title": "Dungeoneering - 6PM Gametime",
+      "start": "2026-11-15T21:00:00Z",
+      "end": "2026-11-15T22:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-11-16T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-11-16T21:00:00Z",
@@ -204,8 +224,18 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
-      "title": "Raven day (Priff)",
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2026-11-22T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2026-11-22T18:00:00Z",
+      "end": "2026-11-22T19:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "72hg98260b73l2jtk18tg7uu4s@google.com::2026-11-23",
+      "title": "LAST DAY TO USE MTX ITEMS",
       "start": "2026-11-23",
       "end": "2026-11-24",
       "all_day": true,
@@ -214,8 +244,8 @@
       "status": "confirmed"
     },
     {
-      "id": "72hg98260b73l2jtk18tg7uu4s@google.com::2026-11-23",
-      "title": "LAST DAY TO USE MTX ITEMS",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
+      "title": "Raven day (Priff)",
       "start": "2026-11-23",
       "end": "2026-11-24",
       "all_day": true,
@@ -244,10 +274,10 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-28T21:00:00Z",
-      "title": "Dungeoneering - 9PM Gametime",
-      "start": "2026-11-28T21:00:00Z",
-      "end": "2026-11-28T22:00:00Z",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-29T21:00:00Z",
+      "title": "Dungeoneering - 6PM Gametime",
+      "start": "2026-11-29T21:00:00Z",
+      "end": "2026-11-29T22:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -294,6 +324,16 @@
       "status": "confirmed"
     },
     {
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2026-12-06T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2026-12-06T18:00:00Z",
+      "end": "2026-12-06T19:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-12-07T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-12-07T21:00:00Z",
@@ -324,10 +364,10 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-12-12T21:00:00Z",
-      "title": "Dungeoneering - 9PM Gametime",
-      "start": "2026-12-12T21:00:00Z",
-      "end": "2026-12-12T22:00:00Z",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-12-13T21:00:00Z",
+      "title": "Dungeoneering - 6PM Gametime",
+      "start": "2026-12-13T21:00:00Z",
+      "end": "2026-12-13T22:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -364,6 +404,16 @@
       "status": "confirmed"
     },
     {
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2026-12-20T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2026-12-20T18:00:00Z",
+      "end": "2026-12-20T19:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-12-21T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2026-12-21T21:00:00Z",
@@ -384,10 +434,10 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-12-26T21:00:00Z",
-      "title": "Dungeoneering - 9PM Gametime",
-      "start": "2026-12-26T21:00:00Z",
-      "end": "2026-12-26T22:00:00Z",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-12-27T21:00:00Z",
+      "title": "Dungeoneering - 6PM Gametime",
+      "start": "2026-12-27T21:00:00Z",
+      "end": "2026-12-27T22:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
@@ -434,6 +484,16 @@
       "status": "confirmed"
     },
     {
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2027-01-03T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2027-01-03T18:00:00Z",
+      "end": "2027-01-03T19:00:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
       "id": "1col6otvisg79023j3c87te494@google.com::2027-01-04T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
       "start": "2027-01-04T21:00:00Z",
@@ -464,10 +524,10 @@
       "status": "confirmed"
     },
     {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2027-01-09T21:00:00Z",
-      "title": "Dungeoneering - 9PM Gametime",
-      "start": "2027-01-09T21:00:00Z",
-      "end": "2027-01-09T22:00:00Z",
+      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2027-01-10T21:00:00Z",
+      "title": "Dungeoneering - 6PM Gametime",
+      "start": "2027-01-10T21:00:00Z",
+      "end": "2027-01-10T22:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
