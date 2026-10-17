@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T18:33:09Z",
-  "event_count": 55,
+  "generated_at": "2026-10-17T20:52:31Z",
+  "event_count": 54,
   "events": [
-    {
-      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-10-10T18:00:00Z",
-      "title": "7PM GMT - MOVIE  - VC Party - ''Spooky Movie'' Movie stream",
-      "start": "2026-10-10T18:00:00Z",
-      "end": "2026-10-10T20:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-12T20:00:00Z",
       "title": "9PM GMT CITADEL CAPPING RESET",
