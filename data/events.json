@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-19T17:12:56Z",
+  "generated_at": "2026-10-19T21:31:07Z",
   "event_count": 55,
   "events": [
-    {
-      "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-12T20:00:00Z",
-      "title": "9PM GMT CITADEL CAPPING RESET",
-      "start": "2026-10-12T20:00:00Z",
-      "end": "2026-10-12T21:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-10-15",
       "title": "Raven day (Priff)",
@@ -444,8 +434,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
-      "title": "Raven day (Priff)",
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
+      "title": "Draw Monthly recruitment raffle",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -454,8 +444,8 @@
       "status": "confirmed"
     },
     {
-      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
-      "title": "Draw Monthly recruitment raffle",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
+      "title": "Raven day (Priff)",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -548,6 +538,16 @@
       "title": "Castlewars - 9PM gametime",
       "start": "2027-01-16T21:00:00Z",
       "end": "2027-01-16T21:30:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2027-01-17T18:00:00Z",
+      "title": "Castlewars - 6PM GMT",
+      "start": "2027-01-17T18:00:00Z",
+      "end": "2027-01-17T19:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
