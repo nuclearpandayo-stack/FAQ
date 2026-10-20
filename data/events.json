@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-19T21:31:07Z",
+  "generated_at": "2026-10-20T00:32:28Z",
   "event_count": 55,
   "events": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-16T19:00:00Z",
-      "title": "8PM GMT - Zamorak EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2026-10-16T19:00:00Z",
       "end": "2026-10-16T20:00:00Z",
       "all_day": false,
@@ -75,7 +75,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-30T20:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2026-10-30T20:00:00Z",
       "end": "2026-10-30T21:00:00Z",
       "all_day": false,
@@ -155,7 +155,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-11-13T20:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2026-11-13T20:00:00Z",
       "end": "2026-11-13T21:00:00Z",
       "all_day": false,
@@ -245,7 +245,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-11-27T20:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2026-11-27T20:00:00Z",
       "end": "2026-11-27T21:00:00Z",
       "all_day": false,
@@ -325,7 +325,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-12-11T20:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2026-12-11T20:00:00Z",
       "end": "2026-12-11T21:00:00Z",
       "all_day": false,
@@ -405,7 +405,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-12-25T20:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2026-12-25T20:00:00Z",
       "end": "2026-12-25T21:00:00Z",
       "all_day": false,
@@ -485,7 +485,7 @@
     },
     {
       "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2027-01-08T20:00:00Z",
-      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "title": "8PM GMT - Elite Dungeons - EU PVM Events - Void & Yung",
       "start": "2027-01-08T20:00:00Z",
       "end": "2027-01-08T21:00:00Z",
       "all_day": false,
