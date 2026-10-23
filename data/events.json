@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T18:55:28Z",
-  "event_count": 55,
+  "generated_at": "2026-10-23T21:44:38Z",
+  "event_count": 54,
   "events": [
-    {
-      "id": "4tdd8565u21f8ao7rda06l3vrt@google.com::2026-10-16T19:00:00Z",
-      "title": "8PM GMT - Zamorak - EU PVM Events - Void & Yung",
-      "start": "2026-10-16T19:00:00Z",
-      "end": "2026-10-16T20:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "hf1qg887s11tv4kstd8lqoc0re@google.com::2026-10-18T17:00:00Z",
       "title": "Dungeoneering  - 6PM GMT",
@@ -204,8 +194,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
-      "title": "Raven day (Priff)",
+      "id": "72hg98260b73l2jtk18tg7uu4s@google.com::2026-11-23",
+      "title": "LAST DAY TO USE MTX ITEMS",
       "start": "2026-11-23",
       "end": "2026-11-24",
       "all_day": true,
@@ -214,8 +204,8 @@
       "status": "confirmed"
     },
     {
-      "id": "72hg98260b73l2jtk18tg7uu4s@google.com::2026-11-23",
-      "title": "LAST DAY TO USE MTX ITEMS",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
+      "title": "Raven day (Priff)",
       "start": "2026-11-23",
       "end": "2026-11-24",
       "all_day": true,
@@ -424,8 +414,8 @@
       "status": "confirmed"
     },
     {
-      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
-      "title": "Draw Monthly recruitment raffle",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
+      "title": "Raven day (Priff)",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -434,8 +424,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
-      "title": "Raven day (Priff)",
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
+      "title": "Draw Monthly recruitment raffle",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
