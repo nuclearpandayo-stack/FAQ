@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-24T16:24:57Z",
+  "generated_at": "2026-10-24T18:51:50Z",
   "event_count": 54,
   "events": [
     {
@@ -194,8 +194,8 @@
       "status": "confirmed"
     },
     {
-      "id": "72hg98260b73l2jtk18tg7uu4s@google.com::2026-11-23",
-      "title": "LAST DAY TO USE MTX ITEMS",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
+      "title": "Raven day (Priff)",
       "start": "2026-11-23",
       "end": "2026-11-24",
       "all_day": true,
@@ -204,8 +204,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2026-11-23",
-      "title": "Raven day (Priff)",
+      "id": "72hg98260b73l2jtk18tg7uu4s@google.com::2026-11-23",
+      "title": "LAST DAY TO USE MTX ITEMS",
       "start": "2026-11-23",
       "end": "2026-11-24",
       "all_day": true,
@@ -414,8 +414,8 @@
       "status": "confirmed"
     },
     {
-      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
-      "title": "Draw Monthly recruitment raffle",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
+      "title": "Raven day (Priff)",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -424,8 +424,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
-      "title": "Raven day (Priff)",
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
+      "title": "Draw Monthly recruitment raffle",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
