@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-25T17:51:54Z",
-  "event_count": 55,
+  "generated_at": "2026-10-25T20:01:09Z",
+  "event_count": 54,
   "events": [
-    {
-      "id": "hf1qg887s11tv4kstd8lqoc0re@google.com::2026-10-18T17:00:00Z",
-      "title": "Dungeoneering  - 6PM GMT",
-      "start": "2026-10-18T17:00:00Z",
-      "end": "2026-10-18T18:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "4fti1c823jboe67dm7ai68sc09@google.com::2026-10-19T20:00:00Z",
       "title": "9PM GMT CITADEL CAPPING RESET",
