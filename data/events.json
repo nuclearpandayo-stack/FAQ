@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-01T18:34:34Z",
+  "generated_at": "2026-11-01T22:18:04Z",
   "event_count": 56,
   "events": [
-    {
-      "id": "4hnberlukutbsdobq13kh2lbjd@google.com::2026-10-25T18:00:00Z",
-      "title": "Castlewars - 6PM GMT",
-      "start": "2026-10-25T18:00:00Z",
-      "end": "2026-10-25T19:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-10-26T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
@@ -559,6 +549,16 @@
       "start": "2027-01-27",
       "end": "2027-01-28",
       "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2027-01-30T21:00:00Z",
+      "title": "Castlewars - 9PM gametime",
+      "start": "2027-01-30T21:00:00Z",
+      "end": "2027-01-30T21:30:00Z",
+      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
