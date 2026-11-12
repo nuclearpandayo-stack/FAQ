@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-11T22:59:42Z",
+  "generated_at": "2026-11-12T03:37:21Z",
   "event_count": 56,
   "events": [
     {
@@ -314,8 +314,8 @@
       "status": "confirmed"
     },
     {
-      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
-      "title": "Draw Monthly recruitment raffle",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
+      "title": "Raven day (Priff)",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -324,8 +324,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
-      "title": "Raven day (Priff)",
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
+      "title": "Draw Monthly recruitment raffle",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
