@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-21T19:33:28Z",
+  "generated_at": "2026-11-21T23:53:21Z",
   "event_count": 56,
   "events": [
-    {
-      "id": "62hcjq233o6ds707p4k08us7ob@google.com::2026-11-14T19:00:00Z",
-      "title": "7PM GMT - MOVIE  - VC Party - Movie stream",
-      "start": "2026-11-14T19:00:00Z",
-      "end": "2026-11-14T21:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-15T21:00:00Z",
       "title": "Dungeoneering - 6PM Gametime",
@@ -274,8 +264,8 @@
       "status": "confirmed"
     },
     {
-      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
-      "title": "Draw Monthly recruitment raffle",
+      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
+      "title": "Raven day (Priff)",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -284,8 +274,8 @@
       "status": "confirmed"
     },
     {
-      "id": "4g01v6ihodovs63v189pqn4m85@google.com::2027-01-01",
-      "title": "Raven day (Priff)",
+      "id": "5ot2i2ob14fbqhems0ii9vo21h@google.com::2027-01-01",
+      "title": "Draw Monthly recruitment raffle",
       "start": "2027-01-01",
       "end": "2027-01-02",
       "all_day": true,
@@ -558,6 +548,16 @@
       "title": "CITADEL CAPPING RESET",
       "start": "2027-02-15T21:00:00Z",
       "end": "2027-02-15T21:30:00Z",
+      "all_day": false,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "4tdd8565u21f8ao7rda06l3vrt_R20261030T200000@google.com::2027-02-19T20:00:00Z",
+      "title": "8PM GMT - EU PVM Events - Void & Yung",
+      "start": "2027-02-19T20:00:00Z",
+      "end": "2027-02-19T21:00:00Z",
       "all_day": false,
       "description": "",
       "location": "",
