@@ -1,18 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-11-22T18:41:31Z",
-  "event_count": 56,
+  "generated_at": "2026-11-22T23:48:40Z",
+  "event_count": 55,
   "events": [
-    {
-      "id": "jkj6kto1shipc9fog7eopvger8@google.com::2026-11-15T21:00:00Z",
-      "title": "Dungeoneering - 6PM Gametime",
-      "start": "2026-11-15T21:00:00Z",
-      "end": "2026-11-15T22:00:00Z",
-      "all_day": false,
-      "description": "",
-      "location": "",
-      "status": "confirmed"
-    },
     {
       "id": "1col6otvisg79023j3c87te494@google.com::2026-11-16T21:00:00Z",
       "title": "CITADEL CAPPING RESET",
