@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-24T11:37:12Z",
-  "event_count": 49,
+  "generated_at": "2026-11-24T21:28:54Z",
+  "event_count": 50,
   "events": [
     {
       "id": "mr2v69brmotm8n4scsm6f5gqgp@google.com::2026-11-21T21:00:00Z",
@@ -489,6 +489,16 @@
       "start": "2027-02-22",
       "end": "2027-02-23",
       "all_day": true,
+      "description": "",
+      "location": "",
+      "status": "confirmed"
+    },
+    {
+      "id": "1col6otvisg79023j3c87te494@google.com::2027-02-22T21:00:00Z",
+      "title": "CITADEL CAPPING RESET",
+      "start": "2027-02-22T21:00:00Z",
+      "end": "2027-02-22T21:30:00Z",
+      "all_day": false,
       "description": "",
       "location": "",
       "status": "confirmed"
